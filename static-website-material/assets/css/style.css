@@ -154,3 +154,24 @@ nav  {
     color: rgba(232, 228, 209, 0.582);
     font-size: 18px;
 }
+/* scroll to top */
+.to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 238, 0, 0.829) !important;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.to-top:hover {
+    color: white;
+    opacity: 0.7;
+}
