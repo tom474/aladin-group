@@ -66,60 +66,16 @@ nav  {
 #banner {
     margin-top: 88px;
 }
-/* main */
-/* category */
-.categories {
-    font-family: var(--title--font);
-    color: white;
-}
 
-.categories .cate-img {
+/* recommendation */
+.group-by {
     display: flex;
-    justify-content: center; 
-}
-.categories .cate-img .img-border {
-    margin-top: 5px;
-    border-radius: 50%;
-}
-.categories .card-body {
-    display: flex;
-    justify-content: center;
-}
-.card:hover {
-    scale: 1.1;
-    transition: all ease-in-out 0.3s; 
-}
-.categories .card-display {
-    display: flex;
-    justify-content: center;
-}
-.categories .card a {
-    text-decoration: none;
-    color: black;
-}
-/* service */
-.service-container {
-    flex-direction: column;
     align-items: center;
 }
-.service-container h3 {
-    font-family: var(--word--font);
-}
-.service-container h4 {
-    font-family: var(--word--font);
-    font-weight: 300;
-}
-.service-container .service-detail {
-    display: flex;
-}
-.service-container .option {
-    display: flex;
-    justify-content: center;
-}
-/* recommendation */
+
 .rec-box h1 {
     font-family: var(--title--font);
-    color: white;
+    color: var(--primary-color);
 }
 
 .product-col {
