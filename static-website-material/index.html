@@ -142,7 +142,12 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Hot</a>
+                                <a class="nav-link position-relative" href="#">
+                                    Hot
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        🔥
+                                    </span>
+                                </a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href="#">Contact</a>
@@ -572,7 +577,7 @@
                             <img class="img-fluid" style="background-color: rgba(229, 141, 26, 0.502);" src="../static-website-material/assets/images/customer/homepage/product/furniture.png" alt="">
                         </div>
                         <div class="absolute d-flex flex-column justify-content-center align-items-center">
-                            <h5 style="letter-spacing: 8px; color: #989B6E; font-size: 35px;" >FURNITURE</h5>
+                            <h5 style="letter-spacing: 8px; color: #989B6E; font-size: 20px;" >FURNITURE</h5>
                             <a href="#" style="text-decoration: none; font-weight:500;">DISCOVER MORE</a>
                         </div>
                     </div>
@@ -599,21 +604,23 @@
                           </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-ms-12 my-3 d-flex product-col">                            
-                        <div class="product-card ms-2  " style="position: relative;">
-                            <div class="product-image border shadow">
-                                <img src="../static-website-material/assets/images/customer/homepage/product/product6.jpg" class="project-thumb" alt="">
-                            </div>
-                            <div class="overlay product-effect" style="position: absolute;">
-                                <div class="p-3 d-flex justify-content-center w-100">
-                                    ADD TO CART
+                        <a href="./views/product-detail.html" style="text-decoration: none; color:black">
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../static-website-material/assets/images/customer/homepage/product/product6.jpg" class="project-thumb" alt="">
+                                </div>
+                                <div class="overlay product-effect" style="position: absolute;">
+                                    <div class="p-3 d-flex justify-content-center w-100">
+                                        ADD TO CART
+                                    </div>
+                                </div>
+                                <div class="product-info d-flex pt-3 align-items-center flex-column">
+                                    <h3>Product Name</h3>
+                                    <p class="mb-0">300.000VND</p>
+    
                                 </div>
                             </div>
-                            <div class="product-info d-flex pt-3 align-items-center flex-column">
-                                <h3>Product Name</h3>
-                                <p class="mb-0">300.000VND</p>
-
-                            </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-lg-4 col-md-6 col-ms-12 my-3 d-flex product-col">
                             <div class="product-card ms-2  " style="position: relative;">

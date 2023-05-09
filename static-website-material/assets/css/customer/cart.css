@@ -36,7 +36,6 @@
 .background-color  {
     background-color: var(--primary-color);
     color: white !important;
-    height: 400px;
 }
 
 .footer-container .content h3 {

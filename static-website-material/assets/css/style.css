@@ -153,9 +153,7 @@
     overflow-x: auto !important;
     scroll-behavior: smooth;
 }
-.product-container::-webkit-scrollbar {
-    display: none;
-}
+
 .product-card {
     flex: 0 0 auto;
     margin-right: 40px;
@@ -196,8 +194,8 @@
 .overlay {
     top: 0;
     left: 0;
-    width: 320px !important;
-    height: 320px !important;
+    width: 322px !important;
+    height: 322px !important;
     display: flex;
     align-items: flex-end;
     cursor: pointer;
@@ -271,7 +269,6 @@
 .background-color  {
     background-color: var(--primary-color);
     color: white !important;
-    height: 400px;
 }
 
 .footer-container .content h3 {
@@ -305,3 +302,20 @@
     color: white;
     opacity: 0.7;
 }
+@media (max-width: 1023px) { 
+    .banner .row .col-lg-5,.banner .row .col-lg-7 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner .row {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 995px) {
+    #recommendation .row  h5 {
+        font-size: 60px !important;
+    }
+}
+

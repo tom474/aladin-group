@@ -9,12 +9,10 @@
     --word-font    :   'Poppins', sans-serif;
     --title--font    :   'Roboto Serif', serif;
 }
-body {
-    background-color: rgba(246, 135, 19,0.3);
-}
+
 /* navbar */
-.navbar  {
-    background-color: var(--primary-color) !important;
+.navbar {
+    background-color: white;
 }
 .nav-content {
 
@@ -25,33 +23,18 @@ body {
     font-size: 20px;
 }
 
-.left {
-    flex-direction: column;
-    justify-content: center;
+
+.nav-content .left h4 {
+    font-family: var(--logo-font);
+    font-size: 30px;
 }
 
-.left li {
-    list-style-type: none !important;
+.middle .nav-item a {
+    color: black !important;
 }
-.left .location {
-    font-family: var(--title--font);
-    color: white;
-    cursor: pointer;
-}
-.left .location a i {
-    color: white;
-}
-.left .location:hover, .left .location a i:hover {
-    opacity: 0.7;
-}
-.left .nav-link {
-    color: white;
-    font-family: var(--word--font) !important;
-}
-
-.middle {
-    display: flex;
-    flex-direction: column;
+.middle .nav-item:hover > a {
+    color: var(--primary-color) !important;
+    transition: all .15s linear;
 }
 
 .right {
@@ -59,8 +42,12 @@ body {
 }
 
 .right .option a{
-    color: white;
+    color: black;
     font-size: 20px;
+}
+.right .option:hover a {
+    color:var(--primary-color) ;
+    transition: all .15s linear;
 }
 
 /* breadcrumb */
@@ -78,11 +65,21 @@ body {
 
 /* product  */
 .product-container {
+    display: flex;
+    overflow-x: auto !important;
+    scroll-behavior: smooth;
+}
+
+.product-card {
+    flex: 0 0 auto;
+    margin-right: 40px;
+}
+.products-container {
     background-color: rgba(255, 255, 255, 0.477);
 }
 
 
-.product-container .item .title {
+.products-container .item .title {
     font-family: var(--word-font);
 
 }
@@ -112,16 +109,16 @@ body {
     background-color: var(--primary-color);
     color: white;
 }
-.quantity-control .box {
-    padding: 4px;
-    border: 1px solid var(--primary-color);
-    height: 35px;
+.quantity-control {
+    padding: 5px;
+    background-color: white !important;
+    border-radius: 5px;
 }
+
 /* footer */
 .background-color  {
     background-color: var(--primary-color);
     color: white !important;
-    height: 400px;
 }
 
 .footer-container .content h3 {

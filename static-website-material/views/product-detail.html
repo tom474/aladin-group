@@ -116,23 +116,38 @@
         <nav class="navbar pt-2 pb-2 fixed-top navbar-expand-md">
             <div class="container-lg ">
                 <div class="nav-content d-flex justify-content-between">
-                    <div class="left">
-                        <div class="content">
-                            <li class="nav-item dropdown ms-3">
+                    <div class="left d-flex flex-row align-items-center">
+                        <a class="navbar-brand" href="#">
+                            <img src="../assets/images/logo-1.png" alt="Bootstrap" width="60" height="50">
+                        </a>
+                        <h4 class="mb-0">Aladin</h4>
+                    </div>
+                    <div class="middle d-flex align-items-center">
+                        <ul class="nav d-flex justify-content-center align-items-center">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Shop
+                                    Category
                                 </a>
                                 <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">US/UK </a></li>
-                                  <li><a class="dropdown-item" href="#">VietNamese</a></li>
+                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
+                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
+                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
+                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
+                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
+                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
+
                                 </ul>
                             </li>
-                        </div>
-                    </div>
-                    <div class="middle">
-                        <a class="navbar-brand" href="#">
-                            <img src="../../static-website-material/assets/images/logo-1(backup).png" alt="Bootstrap" width="70" height="70">
-                        </a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Hot</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Contact</a>
+                            </li>
+                          </ul>
                     </div>
                     <div class="right d-flex">
                         <div class="option">
@@ -146,7 +161,7 @@
                             </a>
                         </div>
                         <div class="option ms-3">
-                            <a href="#">
+                            <a href="../static-website-material/views/cart.html">
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </a>
                         </div>
@@ -167,15 +182,52 @@
         <!-- main -->
         <section id="product-detail">
             <div class="container-lg">
-                <div class="product-container row my-5">
+                <div class="products-container row my-5" style="background-color:rgba(246, 136, 19, 0.3);">
                     <div class="item col-lg-6 d-flex flex-column py-3">
-                        <div class="col-lg-12">
-                            <img class="img-fluid" src="../../static-website-material/assets/images/customer/homepage/product/product.jpg" alt="">
+                        <div class="col-lg-12 ">
+                            <img class="img-fluid" width="100%" src="../../static-website-material/assets/images/customer/homepage/product/product6.jpg" alt="">
                         </div>
-                        <div class="sub-img row d-flex flex-row my-2">
-                            <img class="img-fluid col-lg-4 col-md-4 d-none d-md-block" src="../../static-website-material/assets/images/customer/homepage/product/product_hover.jpg" alt="">
-                            <img class="img-fluid col-lg-4 col-md-4 d-none d-md-block" src="../../static-website-material/assets/images/customer/homepage/product/product_hover.jpg" alt="">
-                            <img class="img-fluid col-lg-4 col-md-4 d-none d-md-block" src="../../static-website-material/assets/images/customer/homepage/product/product_hover.jpg" alt="">
+                        <div class="product-container ">
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product1.jpg" class="project-thumb" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product2.jpg" class="project-thumb" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product3.jpg" class="project-thumb" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product4.jpg" class="project-thumb" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product5.jpg" class="project-thumb" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product6.jpg" class="project-thumb" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product7.jpg" class="project-thumb" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product8.jpg" class="project-thumb" alt="">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="item col-lg-6 py-3">
@@ -209,11 +261,15 @@
                                 <div class="item quantity d-flex">
                                     <h5>Quantity: </h5>
                                     <div class="quantity-control d-flex ms-3">
-                                        <div class="box"><i class="fa-solid fa-minus"></i></div>
-                                        <div class="box ps-3 pe-3">
-                                            <p>1</p>
+                                        <div class="box">
+                                            <span class="minus border-end px-2" style="cursor: pointer;">-</span>
                                         </div>
-                                        <div class="box"><i class="fa-solid fa-plus"></i></div>
+                                        <div class="box px-2">
+                                            <span class="num">01</span>
+                                        </div>
+                                        <div class="box">
+                                            <span class="plus border-start px-2" style="cursor: pointer;">+</span>
+                                        </div>
                                     </div>
 
                                 </div>

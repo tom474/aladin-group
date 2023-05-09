@@ -90,7 +90,7 @@
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta
             name="msapplication-TileImage"
-            content="../assets/favicon/ms-icon-144x144.png"
+            content="./assets/favicon/ms-icon-144x144.png"
         />
         <meta name="theme-color" content="#ffffff" />
 
@@ -116,23 +116,38 @@
         <nav class="navbar pt-2 pb-2 fixed-top navbar-expand-md">
             <div class="container-lg ">
                 <div class="nav-content d-flex justify-content-between">
-                    <div class="left">
-                        <div class="content">
-                            <li class="nav-item dropdown ms-3">
+                    <div class="left d-flex flex-row align-items-center">
+                        <a class="navbar-brand" href="#">
+                            <img src="../assets/images/logo-1.png" alt="Bootstrap" width="60" height="50">
+                        </a>
+                        <h4 class="mb-0">Aladin</h4>
+                    </div>
+                    <div class="middle d-flex align-items-center">
+                        <ul class="nav d-flex justify-content-center align-items-center">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Shop
+                                    Category
                                 </a>
                                 <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">US/UK </a></li>
-                                  <li><a class="dropdown-item" href="#">VietNamese</a></li>
+                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
+                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
+                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
+                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
+                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
+                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
+
                                 </ul>
                             </li>
-                        </div>
-                    </div>
-                    <div class="middle">
-                        <a class="navbar-brand" href="#">
-                            <img src="../../static-website-material/assets/images/logo-1(backup).png" alt="Bootstrap" width="70" height="70">
-                        </a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Hot</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Contact</a>
+                            </li>
+                          </ul>
                     </div>
                     <div class="right d-flex">
                         <div class="option">
@@ -146,7 +161,7 @@
                             </a>
                         </div>
                         <div class="option ms-3">
-                            <a href="#">
+                            <a href="../static-website-material/views/cart.html">
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </a>
                         </div>
@@ -157,33 +172,18 @@
 
         <!-- banner -->
         <section id="banner">
-            <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <div class="banner container-lg">
+                <div class="row " style="position: relative;">
+                    <div>
+                        <img class="img-fluid"  src="../assets/images/customer/category/banner.png" alt="">
+                    </div>
+                    <div class="title d-flex justify-content-center" style="position: absolute ">
+                      <h2>FASHION</h2>
+                    </div>
                 </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active" >
-                    <img src="../../static-website-material/assets/images/customer/homepage/header/banner1.jpg" class="d-block w-100"  alt="...">
-                  </div>
-                  <div class="carousel-item" >
-                    <img src="../../static-website-material/assets/images/customer/homepage/header/banner2.jpg" class="d-block w-100"  alt="...">
-                  </div>
-                  <div class="carousel-item" >
-                    <img src="../../static-website-material/assets/images/customer/homepage/header/banner3.jpg" class="d-block w-100"  alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
+            </div>
         </section>
+        <!-- breadcrmub -->
         <div class="container">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -192,12 +192,11 @@
             </ol>
           </nav>
         </div>
-        <!-- main -->
-        <!-- recommendation -->
-        <section id="recommendation">
+        <!-- HOT -->
+        <section id="hot">
             <div class="container-lg rec-box py-1 my-4">
                 <h1>
-                    CLOTHES
+                    PRODUCT
                 </h1>
                 <div class="row product my-5">
                     <div class="group-by">
@@ -212,195 +211,218 @@
                             </ul>
                           </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-ms-12 my-3 d-flex product-col">
-                        <div class="card relative" style="width: 18rem;">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product.jpg" class="card-img-top" alt="lena bear">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product_hover.jpg" class="card-img-top product_back" alt="lena bear">
-                            <div class="card-body">
-                              <h5 class="card-title">Cute Lena Bear</h5>
-                              <p class="card-text">
-                                200.000d
-                                <span style="text-decoration: line-through; color: red;">245.000d</span>
-                              </p>
-                              <p class="rate">⭐⭐⭐⭐ <span> 1,7k sold</span></p>
-                              <a href="#" class="btn btn-danger">Add to cart</a>
+                    <div class="col-lg-4 col-md-6 col-ms-12 my-3 d-flex product-col">                            
+                        <div class="product-card ms-2  " style="position: relative;">
+                            <div class="product-image border shadow">
+                                <img src="../assets/images/customer/homepage/product/product5.jpg" class="project-thumb" alt="">
+                            </div>
+                            <div class="overlay product-effect" style="position: absolute;">
+                                <div class="p-3 d-flex justify-content-center w-100">
+                                    ADD TO CART
+                                </div>
+                            </div>
+                            <div class="product-info d-flex pt-3 align-items-center flex-column">
+                                <h3>Product Name</h3>
+                                <p class="mb-0">300.000VND</p>
+
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-ms-12 my-3 d-flex product-col">
-                            <div class="card relative" style="width: 18rem;">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product.jpg" class="card-img-top" alt="lena bear">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product_hover.jpg" class="card-img-top product_back" alt="lena bear">
-                            <div class="card-body">
-                              <h5 class="card-title">Cute Lena Bear</h5>
-                              <p class="card-text">
-                                200.000d
-                                <span style="text-decoration: line-through; color: red;">245.000d</span>
-                              </p>
-                              <p class="rate">⭐⭐⭐⭐ <span> 1,7k sold</span></p>
-                              <a href="#" class="btn btn-danger">Add to cart</a>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product5.jpg" class="project-thumb" alt="">
+                                </div>
+                                <div class="overlay product-effect" style="position: absolute;">
+                                    <div class="p-3 d-flex justify-content-center w-100">
+                                        ADD TO CART
+                                    </div>
+                                </div>
+                                <div class="product-info d-flex pt-3 align-items-center flex-column">
+                                    <h3>Product Name</h3>
+                                    <p class="mb-0">300.000VND</p>
+
+                                </div>
                             </div>
-                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-ms-12 my-3 d-flex product-col">
-                            <div class="card relative" style="width: 18rem;">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product.jpg" class="card-img-top" alt="lena bear">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product_hover.jpg" class="card-img-top product_back" alt="lena bear">                            
-                            <div class="card-body">
-                              <h5 class="card-title">Cute Lena Bear</h5>
-                              <p class="card-text">
-                                200.000d
-                                <span style="text-decoration: line-through; color: red;">245.000d</span>
-                              </p>
-                              <p class="rate">⭐⭐⭐⭐ <span> 1,7k sold</span></p>
-                              <a href="#" class="btn btn-danger">Add to cart</a>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product5.jpg" class="project-thumb" alt="">
+                                </div>
+                                <div class="overlay product-effect" style="position: absolute;">
+                                    <div class="p-3 d-flex justify-content-center w-100">
+                                        ADD TO CART
+                                    </div>
+                                </div>
+                                <div class="product-info d-flex pt-3 align-items-center flex-column">
+                                    <h3>Product Name</h3>
+                                    <p class="mb-0">300.000VND</p>
+
+                                </div>
                             </div>
-                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-ms-12 my-3 d-flex product-col">
-                            <div class="card relative" style="width: 18rem;">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product.jpg" class="card-img-top" alt="lena bear">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product_hover.jpg" class="card-img-top product_back" alt="lena bear">                            
-                            <div class="card-body">
-                              <h5 class="card-title">Cute Lena Bear</h5>
-                              <p class="card-text">
-                                200.000d
-                                <span style="text-decoration: line-through; color: red;">245.000d</span>
-                              </p>
-                              <p class="rate">⭐⭐⭐⭐ <span> 1,7k sold</span></p>
-                              <a href="#" class="btn btn-danger">Add to cart</a>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product5.jpg" class="project-thumb" alt="">
+                                </div>
+                                <div class="overlay product-effect" style="position: absolute;">
+                                    <div class="p-3 d-flex justify-content-center w-100">
+                                        ADD TO CART
+                                    </div>
+                                </div>
+                                <div class="product-info d-flex pt-3 align-items-center flex-column">
+                                    <h3>Product Name</h3>
+                                    <p class="mb-0">300.000VND</p>
+
+                                </div>
                             </div>
-                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-ms-12 my-3 d-flex product-col">
-                            <div class="card relative" style="width: 18rem;">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product.jpg" class="card-img-top" alt="lena bear">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product_hover.jpg" class="card-img-top product_back" alt="lena bear">                            
-                            <div class="card-body">
-                              <h5 class="card-title">Cute Lena Bear</h5>
-                              <p class="card-text">
-                                200.000d
-                                <span style="text-decoration: line-through; color: red;">245.000d</span>
-                              </p>
-                              <p class="rate">⭐⭐⭐⭐ <span> 1,7k sold</span></p>
-                              <a href="#" class="btn btn-danger">Add to cart</a>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product5.jpg" class="project-thumb" alt="">
+                                </div>
+                                <div class="overlay product-effect" style="position: absolute;">
+                                    <div class="p-3 d-flex justify-content-center w-100">
+                                        ADD TO CART
+                                    </div>
+                                </div>
+                                <div class="product-info d-flex pt-3 align-items-center flex-column">
+                                    <h3>Product Name</h3>
+                                    <p class="mb-0">300.000VND</p>
+
+                                </div>
                             </div>
-                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-ms-12 my-3 d-flex product-col">
-                            <div class="card relative" style="width: 18rem;">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product.jpg" class="card-img-top" alt="lena bear">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product_hover.jpg" class="card-img-top product_back" alt="lena bear">                            
-                            <div class="card-body">
-                              <h5 class="card-title">Cute Lena Bear</h5>
-                              <p class="card-text">
-                                200.000d
-                                <span style="text-decoration: line-through; color: red;">245.000d</span>
-                              </p>
-                              <p class="rate">⭐⭐⭐⭐ <span> 1,7k sold</span></p>
-                              <a href="#" class="btn btn-danger">Add to cart</a>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product5.jpg" class="project-thumb" alt="">
+                                </div>
+                                <div class="overlay product-effect" style="position: absolute;">
+                                    <div class="p-3 d-flex justify-content-center w-100">
+                                        ADD TO CART
+                                    </div>
+                                </div>
+                                <div class="product-info d-flex pt-3 align-items-center flex-column">
+                                    <h3>Product Name</h3>
+                                    <p class="mb-0">300.000VND</p>
+
+                                </div>
                             </div>
-                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-ms-12 my-3 d-flex product-col">
-                            <div class="card relative" style="width: 18rem;">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product.jpg" class="card-img-top" alt="lena bear">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product_hover.jpg" class="card-img-top product_back" alt="lena bear">                            
-                            <div class="card-body">
-                              <h5 class="card-title">Cute Lena Bear</h5>
-                              <p class="card-text">
-                                200.000d
-                                <span style="text-decoration: line-through; color: red;">245.000d</span>
-                              </p>
-                              <p class="rate">⭐⭐⭐⭐ <span> 1,7k sold</span></p>
-                              <a href="#" class="btn btn-danger">Add to cart</a>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product5.jpg" class="project-thumb" alt="">
+                                </div>
+                                <div class="overlay product-effect" style="position: absolute;">
+                                    <div class="p-3 d-flex justify-content-center w-100">
+                                        ADD TO CART
+                                    </div>
+                                </div>
+                                <div class="product-info d-flex pt-3 align-items-center flex-column">
+                                    <h3>Product Name</h3>
+                                    <p class="mb-0">300.000VND</p>
+
+                                </div>
                             </div>
-                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-ms-12 my-3 d-flex product-col">
-                            <div class="card relative" style="width: 18rem;">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product.jpg" class="card-img-top" alt="lena bear">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product_hover.jpg" class="card-img-top product_back" alt="lena bear">                            
-                            <div class="card-body">
-                              <h5 class="card-title">Cute Lena Bear</h5>
-                              <p class="card-text">
-                                200.000d
-                                <span style="text-decoration: line-through; color: red;">245.000d</span>
-                              </p>
-                              <p class="rate">⭐⭐⭐⭐ <span> 1,7k sold</span></p>
-                              <a href="#" class="btn btn-danger">Add to cart</a>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product5.jpg" class="project-thumb" alt="">
+                                </div>
+                                <div class="overlay product-effect" style="position: absolute;">
+                                    <div class="p-3 d-flex justify-content-center w-100">
+                                        ADD TO CART
+                                    </div>
+                                </div>
+                                <div class="product-info d-flex pt-3 align-items-center flex-column">
+                                    <h3>Product Name</h3>
+                                    <p class="mb-0">300.000VND</p>
+
+                                </div>
                             </div>
-                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-ms-12 my-3 d-flex product-col">
-                            <div class="card relative" style="width: 18rem;">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product.jpg" class="card-img-top" alt="lena bear">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product_hover.jpg" class="card-img-top product_back" alt="lena bear">                            
-                            <div class="card-body">
-                              <h5 class="card-title">Cute Lena Bear</h5>
-                              <p class="card-text">
-                                200.000d
-                                <span style="text-decoration: line-through; color: red;">245.000d</span>
-                              </p>
-                              <p class="rate">⭐⭐⭐⭐ <span> 1,7k sold</span></p>
-                              <a href="#" class="btn btn-danger">Add to cart</a>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product5.jpg" class="project-thumb" alt="">
+                                </div>
+                                <div class="overlay product-effect" style="position: absolute;">
+                                    <div class="p-3 d-flex justify-content-center w-100">
+                                        ADD TO CART
+                                    </div>
+                                </div>
+                                <div class="product-info d-flex pt-3 align-items-center flex-column">
+                                    <h3>Product Name</h3>
+                                    <p class="mb-0">300.000VND</p>
+
+                                </div>
                             </div>
-                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-ms-12 my-3 d-flex product-col">
-                            <div class="card relative" style="width: 18rem;">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product.jpg" class="card-img-top" alt="lena bear">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product_hover.jpg" class="card-img-top product_back" alt="lena bear">                            
-                            <div class="card-body">
-                              <h5 class="card-title">Cute Lena Bear</h5>
-                              <p class="card-text">
-                                200.000d
-                                <span style="text-decoration: line-through; color: red;">245.000d</span>
-                              </p>
-                              <p class="rate">⭐⭐⭐⭐ <span> 1,7k sold</span></p>
-                              <a href="#" class="btn btn-danger">Add to cart</a>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product5.jpg" class="project-thumb" alt="">
+                                </div>
+                                <div class="overlay product-effect" style="position: absolute;">
+                                    <div class="p-3 d-flex justify-content-center w-100">
+                                        ADD TO CART
+                                    </div>
+                                </div>
+                                <div class="product-info d-flex pt-3 align-items-center flex-column">
+                                    <h3>Product Name</h3>
+                                    <p class="mb-0">300.000VND</p>
+
+                                </div>
                             </div>
-                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-ms-12 my-3 d-flex product-col">
-                            <div class="card relative" style="width: 18rem;">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product.jpg" class="card-img-top" alt="lena bear">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product_hover.jpg" class="card-img-top product_back" alt="lena bear">                            
-                            <div class="card-body">
-                              <h5 class="card-title">Cute Lena Bear</h5>
-                              <p class="card-text">
-                                200.000d
-                                <span style="text-decoration: line-through; color: red;">245.000d</span>
-                              </p>
-                              <p class="rate">⭐⭐⭐⭐ <span> 1,7k sold</span></p>
-                              <a href="#" class="btn btn-danger">Add to cart</a>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product5.jpg" class="project-thumb" alt="">
+                                </div>
+                                <div class="overlay product-effect" style="position: absolute;">
+                                    <div class="p-3 d-flex justify-content-center w-100">
+                                        ADD TO CART
+                                    </div>
+                                </div>
+                                <div class="product-info d-flex pt-3 align-items-center flex-column">
+                                    <h3>Product Name</h3>
+                                    <p class="mb-0">300.000VND</p>
+
+                                </div>
                             </div>
-                        </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-ms-12 my-3 d-flex product-col">
-                            <div class="card relative" style="width: 18rem;">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product.jpg" class="card-img-top" alt="lena bear">
-                            <img src="../../static-website-material/assets/images/customer/homepage/product/product_hover.jpg" class="card-img-top product_back" alt="lena bear">                            
-                            <div class="card-body">
-                              <h5 class="card-title">Cute Lena Bear</h5>
-                              <p class="card-text">
-                                200.000d
-                                <span style="text-decoration: line-through; color: red;">245.000d</span>
-                              </p>
-                              <p class="rate">⭐⭐⭐⭐ <span> 1,7k sold</span></p>
-                              <a href="#" class="btn btn-danger">Add to cart</a>
+                            <div class="product-card ms-2  " style="position: relative;">
+                                <div class="product-image border shadow">
+                                    <img src="../assets/images/customer/homepage/product/product5.jpg" class="project-thumb" alt="">
+                                </div>
+                                <div class="overlay product-effect" style="position: absolute;">
+                                    <div class="p-3 d-flex justify-content-center w-100">
+                                        ADD TO CART
+                                    </div>
+                                </div>
+                                <div class="product-info d-flex pt-3 align-items-center flex-column">
+                                    <h3>Product Name</h3>
+                                    <p class="mb-0">300.000VND</p>
+
+                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
-            
         </section>
         <!-- footer -->
         <section id="footer">
-            <div class="background-color ">
-                <div class="container-lg footer-container py-1">
-                    <div class="content row my-5">
+            <div class="background-color mt-4">
+                <div class="container-lg background-color footer-container py-1">
+                    <div class="content background-color row my-5">
                         <div class="col-lg-3 col-md-6 col-ms-12">
                             <h3 style="font-size: 35px; font-family: 'Dancing Script', cursive;">Aladin</h3>
                             <p>Copyright <span><i class="fa-regular fa-copyright"></i></span> Aladin </p>
@@ -437,6 +459,6 @@
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"
         ></script>
-        <script src="../assets/js/index.js"></script>
+        <script src="assets/js/index.js"></script>
     </body>
 </html>
