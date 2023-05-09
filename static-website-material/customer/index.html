@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Register</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../assets/css/reset.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="../assets/favicon/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="../assets/favicon/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="../assets/favicon/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="../assets/favicon/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="../assets/favicon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="../assets/favicon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="../assets/favicon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="../assets/favicon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="../assets/favicon/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="../assets/favicon/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="../assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="../assets/favicon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="../assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="../assets/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+            name="msapplication-TileImage"
+            content="../assets/favicon/ms-icon-144x144.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700&family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,600&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Font Awesome 5 -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!--Image crop -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.9/cropper.min.css" />
+    </head>
+    <body id="main_index">
+        <div class="container">
+            <div class="contents">
+                <div class="images">
+                    <div class="logo">
+                        <a href="#"><img src="../assets/images/aladin_logo.PNG" height="100px"></a>
+                        <h3 class="caregory"><a href="../customer/" id="customer" href="#"><span>Customer</span></a> | <a href="../vendor/" id="vendor" href="#">Vendor</a> | <a href="../shipper/" id="shipper" href="#">Shipper</a></h3>
+                    </div>
+                    <div>
+                        <img src="../assets/images/4486335.svg" height="400px">
+                    </div>
+                    <div class="alter_login">
+                        <div><p>or continue with:</p></div>
+                        <div class="alter_login_icon">
+                            <a href="#"><img src="../assets/images/Google__G__Logo.svg" height="30px"></a>
+                            <a href="#"><img src="../assets/images/Facebook-Icon-9imsd.svg" height="30px"></a>
+                            <a href="#"><img src="../assets/images/cdnlogo.com_twitter-icon.svg" height="30px"></a>
+                        </div>
+                    </div>
+                </div> 
+                
+                <form action="#" method="post" id="profile-form">
+                    <div class="form_title">
+                        <h2>Create an account</h2>
+                        
+                    </div>
+                    <div class="contact_form">    
+
+                        <div class="input_box profile_pic">
+                            <img src="../assets/images/Default_pfp.svg" title="Please choose a profile picture" id="photo">
+                            <input type="file" id="file" name="pfp" accept="image/*" title="Please choose a profile picture">
+                            <label for="file" id="upload_button" title="Please choose a profile picture">Choose Photo</label>
+                        </div>                                     
+                                
+                        <div class="input_box username">
+                            <label>Username </label>
+                            <input type="text" id="username" name="username" placeholder="SillyBanana420" pattern="^[a-zA-Z0-9]{8,15}$" autofocus title="contains only letters (lower and upper case) and digits, has a length from 8 to 15 characters" required/>
+                        </div>
+        
+                        <div class="input_box name">
+                            <label>Full name </label>
+                            <input type="text" name="name" id="name" placeholder="John Smith" title="Please enter your name, minimum 5 charaters long" required/>
+                        </div>
+
+                        <div class="input_box email">
+                            <label>Email address </label>
+                            <input type="email" name="email" id="email" pattern=".{5,}" title="enter your email address" placeholder="example@email.com" required/>
+                        </div>
+        
+                        <div class="input_box address">
+                            <label>Address </label>
+                            <input type="text" name="text" id="tel" placeholder="69 Hai Ba Trung" pattern=".{5,}" title="Please enter your address, minimum 5 charaters long" required/>
+                        </div>
+                               
+                        <div class="input_box password">
+                            <label>Set password </label>
+                            <div><input id="password" type="password" name="pwd" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,20}" title="Must contain at least one number, uppercase, lowercase letter, one special charater (!@#$%^&*), and length from 8 to 20 charaters" required/><i class="fa fa-eye-slash" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i></div>
+                        </div>
+
+                        <div class="input_box terms">
+                            <div class="checkbox_option">
+                            <div><input type="checkbox" class="checkbox" name="Terms" id="terms" title="Check this box if you agree to out terms and conditions" required/>I have read and agree to the <a href="#">terms and conditions</a></div>
+                            </div>
+                        </div>
+                                
+                        <div class="input_box submit">
+                            <input type="submit" value="Register">
+                        </div>
+
+                        <div class="input_box">
+                            <p id="login">Already have an account? <a href="#">Login</a></p>
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+
+        </div>
+
+        <!-- JavaScript -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"
+        ></script>
+        <script src="../assets/js/index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    </body>
+</html>
