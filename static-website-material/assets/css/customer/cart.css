@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color : #F68713;
+    --logo-font     :   'Dancing Script', cursive;
+    --word-font    :   'Poppins', sans-serif;
+    --title--font    :   'Roboto Serif', serif;
+}
+
+/* navbar */
+#bar {
+    background-color: var(--primary-color);
+}
+.navbar-brand h1 {
+    font-family: var(--logo-font);
+}
+.navbar-brand p {
+    font-family: var(--word--font);
+    margin-bottom: 0;
+}
+.in-cart-container {
+    background-color: rgba(246, 135, 19,0.3);   
+}
+#in-cart .container-lg {
+    background-color: white;
+}
+.quantity-control .box {
+    padding: 4px;
+    border: 1px solid var(--primary-color);
+    height: 35px;
+}
+/* footer */
+.background-color  {
+    background-color: var(--primary-color);
+    color: white !important;
+    height: 400px;
+}
+
+.footer-container .content h3 {
+    color: rgb(255, 208, 0) !important;
+    font-family: var(--title--font);
+    font-size: 20px;
+}
+.footer-container .content a, .footer-container .content p {
+    text-decoration: none !important;
+    color: rgba(232, 228, 209, 0.582);
+    font-size: 18px;
+}
+/* scroll to top */
+.to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 238, 0, 0.829) !important;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.to-top:hover {
+    color: white;
+    opacity: 0.7;
+}
