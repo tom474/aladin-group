@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Aladin</title>
+       
+        <!-- CSS -->
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="./assets/css/style.css" />
+
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="./assets/favicon/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="./assets/favicon/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="./assets/favicon/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="./assets/favicon/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="./assets/favicon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="./assets/favicon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="./assets/favicon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="./assets/favicon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/favicon/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="./assets/favicon/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="./assets/favicon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+            name="msapplication-TileImage"
+            content="./assets/favicon/ms-icon-144x144.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700&family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,600&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Font Awesome 5 -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div class="d-flex main-vp">
+            <!-- Side menu start-->
+            <div class="d-flex flex-column flex-shrink-0 p-3 bg-light fixed-top" style="width: 280px; height: 47vw;">
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="d-flex align-items-center link-dark text-decoration-none">
+                    <img src="https://github.com/mdo.png" alt="" width="45" height="45" class="rounded-circle me-2">
+                    <div>
+                        <span class="text-secondary">Hello,</span>
+                        <br>
+                        <strong class="fs-5">User Name</strong>
+                    </div>
+                    </a>
+                    <a href="" class="bi bi-box-arrow-right text-secondary fs-5"></a>
+                </div>
+                <br>
+                <br>
+                <div class="earning">
+                    <span class="text-secondary">Earning</span>
+                    <br>
+                    <span class="fs-2"><strong>$12,560.55</strong></span>
+                </div>
+                <br>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item home">
+                    <a href="#home-page" class="nav-link selected text-black fs-5">
+                        <i class="bi bi-reception-4 me-2 fs-4"></i>
+                        <strong>Dashboard</strong>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#order-page" class="nav-link text-black fs-5">
+                        <i class="bi bi-list-check me-2 fs-4"></i>
+                        <strong>Orders <span class="noti ms-2">3</span></strong>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#product-page" class="nav-link text-black fs-5">
+                        <i class="bi bi-box-seam me-2 fs-4"></i>
+                        <strong>Products</strong>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#message-page" class="nav-link text-black fs-5">
+                        <i class="bi bi-envelope me-2 fs-4"></i>
+                        <strong>Messages <span class="noti ms-2">3</span></strong>
+                    </a>
+                </li>
+                </ul>
+                <div class="logo-container ">
+                    <a href="/" class="d-flex justify-content-between align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none" style="width: 160px;">
+                        <img src="/aladin-group/static-website-material/assets/favicon/android-icon-48x48.png" alt="brand-logo">
+                        <span class="fs-1" style="font-family: Dancing Script;">Aladin</span>
+                    </a>
+                    <span>Copyright<i class="fas fa-copyright px-2" style="font-weight: 100;"></i>Aladin</span>
+                </div>
+            </div>
+            <!-- Side menu end-->
+
+            <!-- Home Page start-->
+            <div class="container-fluid rounded-page home-page-content" id="home-page">
+                <nav class="d-flex justify-content-between align-items-center" style="padding: 2.5% 5% 0;">
+                    <a class="navbar-brand"><strong class="fs-1">Dashboard</strong>
+                        <br>
+                        <p class="text-secondary">Everything here</p>
+                    </a>
+                    <form class="search-form mt-1" style="width: 400px">
+                        <a class="bi bi-search fs-6 text-black me-2" type="submit"></a>
+                        <input class="search-bar" type="search" placeholder="Search anything..." aria-label="Search">
+                    </form>
+                    <a href="#" class="nav-link text-black fs-6">
+                        <strong>View Your Store</strong>
+                        <i class="bi bi-box-arrow-in-right ms-2 fs-5"></i>
+                    </a>
+                </nav>
+                <br>
+                <div class="container-fluid pt-4 px-4">
+                    <div class="row g-4">
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="bg-secondary-subtle rounded d-flex align-items-center justify-content-between p-4">
+                                <i class="fa fa-chart-line fa-3x" style="color: #f68713;"></i>
+                                <div class="ms-3">
+                                    <p class="mb-2">Today Sale</p>
+                                    <h6 class="mb-0">$1234</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="bg-secondary-subtle rounded d-flex align-items-center justify-content-between p-4">
+                                <i class="fa fa-chart-bar fa-3x" style="color: #f68713;"></i>
+                                <div class="ms-3">
+                                    <p class="mb-2">Today Revenue</p>
+                                    <h6 class="mb-0">$1234</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="bg-secondary-subtle rounded d-flex align-items-center justify-content-between p-4">
+                                <i class="fa fa-chart-area fa-3x" style="color: #f68713;"></i>
+                                <div class="ms-3">
+                                    <p class="mb-2">Customers</p>
+                                    <h6 class="mb-0">1234</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="bg-secondary-subtle rounded d-flex align-items-center justify-content-between p-4">
+                                <i class="fa fa-chart-pie fa-3x" style="color: #f68713;"></i>
+                                <div class="ms-3">
+                                    <p class="mb-2">Orders</p>
+                                    <h6 class="mb-0">1234</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid pt-4 px-4">
+                    <div class="row g-4">
+                        <div class="col-sm-12 col-xl-6">
+                            <div class="bg-secondary-subtle rounded h-100 p-4">
+                                <h6 class="mb-4">Changes of Sales in a year</h6>
+                                <canvas id="line-chart"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-6">
+                            <div class="bg-secondary-subtle rounded h-100 p-4">
+                                <h6 class="mb-4">Number of Customers in three big cities of Viet Nam</h6>
+                                <canvas id="worldwide-sales"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid pt-4 px-4">
+                    <div class="row g-4">
+                        <div class="col-sm-12 col-md-6 col-xl-12 ">
+                            <div class="h-100 bg-secondary-subtle rounded p-4">
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+                                    <h6 class="mb-0">To Do List</h6>
+                                    <a href="" class="text-black">Show All</a>
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <input class="form-control bg-light border-0" type="text" placeholder="Enter task">
+                                    <button type="button" class="btn text-light ms-2" style="background-color: #f68713;">Add</button>
+                                </div>
+                                <div class="d-flex align-items-center border-bottom py-2">
+                                    <input class="form-check-input m-0" type="checkbox">
+                                    <div class="w-100 ms-3">
+                                        <div class="d-flex w-100 align-items-center justify-content-between">
+                                            <span>Short task goes here...</span>
+                                            <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center border-bottom py-2">
+                                    <input class="form-check-input m-0" type="checkbox">
+                                    <div class="w-100 ms-3">
+                                        <div class="d-flex w-100 align-items-center justify-content-between">
+                                            <span>Short task goes here...</span>
+                                            <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center border-bottom py-2">
+                                    <input class="form-check-input m-0" type="checkbox" checked>
+                                    <div class="w-100 ms-3">
+                                        <div class="d-flex w-100 align-items-center justify-content-between">
+                                            <span><del>Short task goes here...</del></span>
+                                            <button class="btn btn-sm text-primary"><i class="fa fa-times"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center border-bottom py-2">
+                                    <input class="form-check-input m-0" type="checkbox">
+                                    <div class="w-100 ms-3">
+                                        <div class="d-flex w-100 align-items-center justify-content-between">
+                                            <span>Short task goes here...</span>
+                                            <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center pt-2">
+                                    <input class="form-check-input m-0" type="checkbox">
+                                    <div class="w-100 ms-3">
+                                        <div class="d-flex w-100 align-items-center justify-content-between">
+                                            <span>Short task goes here...</span>
+                                            <button class="btn btn-sm"><i class="fa fa-times"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+            <!-- Home Page end-->
+
+            <!-- Product Page start-->
+            <div class="container-fluid rounded-page product-page-content" id="product-page">
+                <nav class="d-flex justify-content-between align-items-center" style="padding: 2.5% 5% 0;">
+                    <a class="navbar-brand"><strong class="fs-1">Products</strong>
+                        <br>
+                        <p class="text-secondary">Manage your products here</p>
+                    </a>
+                    <form class="search-form mt-1" style="width: 400px">
+                        <a class="bi bi-search fs-6 text-black me-2" type="submit"></a>
+                        <input class="search-bar" type="search" placeholder="Search anything..." aria-label="Search">
+                    </form>
+                    <a href="#" class="nav-link text-black fs-6">
+                        <strong>View Your Store</strong>
+                        <i class="bi bi-box-arrow-in-right ms-2 fs-5"></i>
+                    </a>
+                </nav>
+                <br>
+                <a href="#form-page" class="text-decoration-none"><button type="button" class="add-button">
+                    <span class="add-button__text">Add Product</span>
+                    <span class="add-button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                </button></a>
+                <br>
+                <table class="table table-bordered border-black table-hover">
+                    <thead>
+                        <tr>
+                          <th scope="col" class="fs-5"><strong>#</strong></th>
+                          <th scope="col" class="fs-5"><strong>Name</strong></th>
+                          <th scope="col" class="fs-5"><strong>Image</strong></th>
+                          <th scope="col" class="fs-5"><strong>Price</strong></th>
+                          <th scope="col" class="fs-5"><strong>Description</strong></th>
+                          <th scope="col" class="fs-5"><strong>Category</strong></th>
+                          <th scope="col" class="fs-5"><strong>Added Date</strong></th>
+                          <th scope="col" class="fs-5"><strong>Amount</strong></th>
+                          <th scope="col" class="fs-5"><strong>Action</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="align-middle">1</th>
+                          <td>Clothe</td>
+                          <td><img src="/aladin-group/static-website-material/assets/images/clothe.png" alt="" width="200px" height="200px"></td>
+                          <td>$99.99</td>
+                          <td>Description </td>
+                          <td>Clothe</td>
+                          <td>DD/MM/YYYY</td>
+                          <td>999</td>
+                          <td>
+                            <button class="edit-button mx-auto btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" type="button">
+                                <svg class="svg-icon" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g stroke="#f68713" stroke-linecap="round" stroke-width="2"><path d="m20 20h-16"></path><path clip-rule="evenodd" d="m14.5858 4.41422c.781-.78105 2.0474-.78105 2.8284 0 .7811.78105.7811 2.04738 0 2.82843l-8.28322 8.28325-3.03046.202.20203-3.0304z" fill-rule="evenodd"></path></g></svg>
+                                <span class="lable">Edit</span>
+                            </button>
+                        </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="align-middle">2</th>
+                            <td>Clothe</td>
+                            <td><img src="/aladin-group/static-website-material/assets/images/clothe.png" alt="" width="200px" height="200px"></td>
+                            <td>$99.99</td>
+                            <td> Description</td>
+                            <td>Clothe</td>
+                            <td>DD/MM/YYYY</td>
+                            <td>999</td>
+                            <td>
+                                <button class="edit-button mx-auto btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" type="button">
+                                    <svg class="svg-icon" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g stroke="#f68713" stroke-linecap="round" stroke-width="2"><path d="m20 20h-16"></path><path clip-rule="evenodd" d="m14.5858 4.41422c.781-.78105 2.0474-.78105 2.8284 0 .7811.78105.7811 2.04738 0 2.82843l-8.28322 8.28325-3.03046.202.20203-3.0304z" fill-rule="evenodd"></path></g></svg>
+                                    <span class="lable">Edit</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="align-middle">3</th>
+                            <td>Clothe</td>
+                            <td><img src="/aladin-group/static-website-material/assets/images/clothe.png" alt="" width="200px" height="200px"></td>
+                            <td>$99.99</td>
+                            <td> Description</td>
+                            <td>Clothe</td>
+                            <td>DD/MM/YYYY</td>
+                            <td>999</td>
+                            <td>
+                                <button class="edit-button mx-auto btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" type="button">
+                                    <svg class="svg-icon" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g stroke="#f68713" stroke-linecap="round" stroke-width="2"><path d="m20 20h-16"></path><path clip-rule="evenodd" d="m14.5858 4.41422c.781-.78105 2.0474-.78105 2.8284 0 .7811.78105.7811 2.04738 0 2.82843l-8.28322 8.28325-3.03046.202.20203-3.0304z" fill-rule="evenodd"></path></g></svg>
+                                    <span class="lable">Edit</span>
+                                </button>
+                            </td>
+                        </tr>
+                      </tbody>
+                </table>
+            </div>
+            <!-- Product Page end-->
+
+            <!-- Form to add product start-->
+            <div class="container-fluid rounded-page form-page-content" id="form-page">
+                <nav class="d-flex justify-content-between align-items-center" style="padding: 2.5% 5% 0;">
+                    <a class="navbar-brand"><strong class="fs-1">Product Form</strong>
+                        <br>
+                        <p class="text-secondary">Add your products here</p>
+                    </a>
+                    <form class="search-form mt-1" style="width: 400px">
+                        <a class="bi bi-search fs-6 text-black me-2" type="submit"></a>
+                        <input class="search-bar" type="search" placeholder="Search anything..." aria-label="Search">
+                    </form>
+                    <a href="#" class="nav-link text-black fs-6">
+                        <strong>View Your Store</strong>
+                        <i class="bi bi-box-arrow-in-right ms-2 fs-5"></i>
+                    </a>
+                </nav>
+                <br>
+                <div class="container d-flex justify-content-between form-container">
+                    <img src="/aladin-group/static-website-material/assets/images/form-banner.png" alt="">
+                    <form action="" class="d-flex flex-column">
+                        <h2 class="text-secondary">Fill in the product information</h2>
+                        <br>
+                        <label class="fs-4 mb-2" for="name">Name</label>
+                        <input  class = "form-input" type="text" name='Name' id="name" required>
+                        <br>
+                        <label class="fs-4 mb-2" for="price">Price</label>
+                        <input  class = "form-input" type="number" name='Price' id="price" required>
+                        <br>
+                        <label class="fs-4 mb-2" for="category">Select Category</label>
+                        <select class="form-input" name="category" id="category" required>
+                            <option value="category1">category1</option>
+                            <option value="category1">category1</option>
+                            <option value="category1">category1</option>
+                            <option value="category1">category1</option>
+                            <option value="category1">category1</option>
+                        </select>
+                        <br>
+                        <label class="fs-4 mb-2" for="description">Description</label>
+                        <input  class = "form-input" type="text" name="Description" id="description" required>
+                        <br> 
+                        <label class="fs-4 mb-2" for="added-date">Date</label>
+                        <input  class = "form-input" type="date" name="Added Date" id="added-date" autocomplete="bday"> 
+                        <br>
+                        <label class="fs-4 mb-2" for="amount">Amount</label>
+                        <input  class = "form-input" type="number" name="Amount" id="amount" required>
+                        <br>
+                        <label class="fs-4 mb-2" for="image">Upload Your Product's Image</label>
+                        <input accept=".jpg, .jpeg, .png, .gif, .pdf" type="file" name="Image" id="image" required>
+                        <br>
+                        <div class="d-flex justify-content-between">
+                            <button class="form-btn" type="submit"><a href="#product-page" class="text-decoration-none">Submit</a></button>
+                            <button class="reset-form-btn" type="reset">Reset</button>
+                        </div>
+                        <a href="#product-page" class="nav-link text-black fs-6">
+                            <i class="bi bi-arrow-left-square me-2 fs-5"></i>
+                            <strong>Back to Product Page</strong>
+                        </a>
+                    </form>
+                </div>
+            </div>
+            <!-- Form to add product end-->
+
+            <!-- Form to edit product start-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">  
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Product's Information</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container d-flex justify-content-between align-items-center modal-form-container">
+                                <img src="/aladin-group/static-website-material/assets/images/clothe.png" alt="">
+                                <form action="" class="d-flex flex-column">
+                                    <label class="fs-4 mb-2" for="name">Name</label>
+                                    <input  class = "form-input" type="text" name='Name' id="name" value='Clothe' required>
+                                    <br>
+                                    <label class="fs-4 mb-2" for="price">Price</label>
+                                    <input  class = "form-input" type="text" name='Price' id="price" value='$99.99' required>
+                                    <br>
+                                    <label class="fs-4 mb-2" for="category">Select Category</label>
+                                    <select class="form-input" name="category" id="category" value='category 1' required>
+                                        <option value="category1">category1</option>
+                                        <option value="category1">category1</option>
+                                        <option value="category1">category1</option>
+                                        <option value="category1">category1</option>
+                                        <option value="category1">category1</option>
+                                    </select>
+                                    <br>
+                                    <label class="fs-4 mb-2" for="description">Description</label>
+                                    <input  class = "form-input" type="text" name="Description" id="description" value='abcxyz' required>
+                                    <br> 
+                                    <label class="fs-4 mb-2" for="added-date">Date</label>
+                                    <input  class = "form-input" type="date" name="Added Date" id="added-date" value='2023-05-10' required> 
+                                    <br>
+                                    <label class="fs-4 mb-2" for="amount">Amount</label>
+                                    <input  class = "form-input" type="number" name="Amount" id="amount" value='999' required>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary modal-btn" data-bs-dismiss="modal"><strong>Save changes</strong></button>
+                            <button class="delete-btn"><span class="delete-btn_text">Delete</span><span class="delete-btn_icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Form to edit product end-->
+
+            <!-- Order page start-->
+            <div class="container-fluid rounded-page order-page-content" id="order-page">
+                <nav class="d-flex justify-content-between align-items-center" style="padding: 2.5% 5% 0;">
+                    <a class="navbar-brand"><strong class="fs-1">Orders</strong>
+                        <br>
+                        <p class="text-secondary">View your orders here</p>
+                    </a>
+                    <form class="search-form mt-1" style="width: 400px">
+                        <a class="bi bi-search fs-6 text-black me-2" type="submit"></a>
+                        <input class="search-bar" type="search" placeholder="Search anything..." aria-label="Search">
+                    </form>
+                    <a href="#" class="nav-link text-black fs-6">
+                        <strong>View Your Store</strong>
+                        <i class="bi bi-box-arrow-in-right ms-2 fs-5"></i>
+                    </a>
+                </nav>
+                <br>
+                <div class="container-fluid">
+                    <div class="rounded h-100 p-4">
+                        <table class="table table-hover text-start order-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-secondary"><strong>ID</strong></th>
+                                    <th scope="col" class="text-secondary"><strong>Date</strong></th>
+                                    <th scope="col" class="text-secondary"><strong>Products</strong></th>
+                                    <th scope="col" class="text-secondary"><strong>Payment</strong></th>
+                                    <th scope="col" class="text-secondary"><strong>Fulfilment</strong></th>
+                                    <th scope="col" class="text-secondary"><strong>Total</strong></th>
+                                    <th scope="col" class="text-secondary"><strong></strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="order-id"scope="row">#A580</th>
+                                    <td>DD/MM/YYYY</td>
+                                    <td>Clothe</td>
+                                    <td><span class="paid">Paid</span></td>
+                                    <td class="d-flex justify-content-start align-items-center"><i class="bi bi-dot fs-1 text-success"></i>Delivered</td>
+                                    <td><strong>$99.99</strong></td>
+                                    <td><a href="#" class="bi bi-three-dots text-secondary"></a></td>
+                                </tr>
+                                <tr>
+                                    <th class="order-id"scope="row">#B260</th>
+                                    <td>DD/MM/YYYY</td>
+                                    <td>Clothe</td>
+                                    <td><span class="paid">Paid</span></td>
+                                    <td class="d-flex justify-content-start align-items-center"><i class="bi bi-dot fs-1 text-success"></i>Delivered</td>
+                                    <td><strong>$99.99</strong></td>
+                                    <td><a href="#" class="bi bi-three-dots text-secondary"></a></td>
+                                </tr>
+                                <tr>
+                                    <th class="order-id"scope="row">#A583</th>
+                                    <td>DD/MM/YYYY</td>
+                                    <td>Clothe</td>
+                                    <td><span class="unpaid">Unpaid</span></td>
+                                    <td class="d-flex justify-content-start align-items-center"><i class="bi bi-dot fs-1 text-warning"></i>In Progress</td>
+                                    <td><strong>$99.99</strong></td>
+                                    <td><a href="#" class="bi bi-three-dots text-secondary"></a></td>
+                                </tr>
+                                <tr>
+                                    <th class="order-id"scope="row">#A584</th>
+                                    <td>DD/MM/YYYY</td>
+                                    <td>Clothe</td>
+                                    <td><span class="paid">Paid</span></td>
+                                    <td class="d-flex justify-content-start align-items-center"><i class="bi bi-dot fs-1 text-success"></i>Delivered</td>
+                                    <td><strong>$99.99</strong></td>
+                                    <td><a href="#" class="bi bi-three-dots text-secondary"></a></td>
+                                </tr>
+                                <tr>
+                                    <th class="order-id"scope="row">#A076</th>
+                                    <td>DD/MM/YYYY</td>
+                                    <td>Clothe</td>
+                                    <td><span class="unpaid">Unpaid</span></td>
+                                    <td class="d-flex justify-content-start align-items-center"><i class="bi bi-dot fs-1 text-danger"></i>Cancel</td>
+                                    <td><strong>$99.99</strong></td>
+                                    <td><a href="#" class="bi bi-three-dots text-secondary"></a></td>
+                                </tr>
+                                <tr>
+                                    <th class="order-id"scope="row">#A581</th>
+                                    <td>DD/MM/YYYY</td>
+                                    <td>Clothe</td>
+                                    <td><span class="paid">Paid</span></td>
+                                    <td class="d-flex justify-content-start align-items-center"><i class="bi bi-dot fs-1 text-success"></i>Delivered</td>
+                                    <td><strong>$99.99</strong></td>
+                                    <td><a href="#" class="bi bi-three-dots text-secondary"></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Order page end-->
+
+            <!-- Messages page start -->
+            <div class="container-fluid rounded-page message-page-content" id="message-page">
+                <nav class="d-flex justify-content-between align-items-center" style="padding: 2.5% 5% 0;">
+                    <a class="navbar-brand"><strong class="fs-1">Messages</strong>
+                        <br>
+                        <p class="text-secondary">View customers messages here</p>
+                    </a>
+                    <form class="search-form mt-1" style="width: 400px">
+                        <a class="bi bi-search fs-6 text-black me-2" type="submit"></a>
+                        <input class="search-bar" type="search" placeholder="Search anything..." aria-label="Search">
+                    </form>
+                    <a href="#" class="nav-link text-black fs-6">
+                        <strong>View Your Store</strong>
+                        <i class="bi bi-box-arrow-in-right ms-2 fs-5"></i>
+                    </a>
+                </nav>
+                <br>
+                <div role="main" class="container  ">
+                    <div class="my-3 p-3 bg-white rounded box-shadow" style="padding: 0 50px!important;">
+                        <div class="media text-muted pt-3 position-relative">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="mr-2 rounded" width="32" height="32">
+                            <span class="mx-2" style="background-color: #f68713; color: white; border-radius: 5px;">New!</span>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-black fs-5">Cuong123</strong>
+                            Hi, Is there size XXL for this tee?
+                            <span class="text-black position-absolute top-1 end-0" style="font-weight: bold;">Today, 3:47 PM</span>
+                            </p>
+                        </div>
+                        <div class="media text-muted pt-3 position-relative">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="" class="mr-2 rounded" width="32" height="32">
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <span class="d-block text-black fs-5">Loc456</span>
+                            I want to buy a blue big bear for my girlfriend. Do you have it?
+                            <span class="text-black position-absolute top-1 end-0">Today, 3:47 PM</span>
+                            </p>
+                        </div>
+                        <div class="media text-muted pt-3 position-relative">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="" class="mr-2 rounded" width="32" height="32">
+                            <span class="mx-2" style="background-color: #f68713; color: white; border-radius: 5px;">New!</span>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-black fs-5">Hao789</strong>
+                            I see your store sells this bag. Is there black ones?
+                            <span class="text-black position-absolute top-1 end-0" style="font-weight: bold;">Today, 3:47 PM</span>
+                            </p>
+                        </div>
+                        <div class="media text-muted pt-3 position-relative">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="" class="mr-2 rounded" width="32" height="32">
+                            <span class="mx-2" style="background-color: #f68713; color: white; border-radius: 5px;">New!</span>
+                            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-black fs-5">Minhjqk</strong>
+                            Hello shop, Can I ask something?
+                            <span class="text-black position-absolute top-1 end-0" style="font-weight: bold;">Today, 3:47 PM</span>
+                            </p>
+                        </div>
+                        <small class="d-block text-right mt-3">
+                            <a href="#">All messages</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <!-- Messages page end -->
+        </div>
+        <!-- JavaScript -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="/aladin-group/static-website-material/assets/js/chart.min.js"></script>
+        <script src="/aladin-group/static-website-material/assets/js/index.js"></script>
+    </body>
+</html>

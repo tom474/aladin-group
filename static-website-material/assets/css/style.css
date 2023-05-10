@@ -1,0 +1,436 @@
+.selected {
+    position: relative;
+    color: #F68713!important;
+}
+.selected::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 100%;
+    background-color: #F68713;
+}
+.selected:hover {
+    color: #fff;
+}
+.main-vp {
+    background-color: #f8f9fa;
+}
+.rounded-page {
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    box-shadow: -2px 0px 10px -5px #5e6061;
+    padding-bottom: 10px;
+    margin-left: 290px;
+}
+.noti{
+    display: inline-block;
+    background-color: #f68713;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+}
+/* CSS for table in Product Page */
+table {
+    text-align: center;
+}
+
+tbody > tr:nth-child(odd) {
+    background-color: #eeeeee;
+}
+/* CSS for Search Bar */
+.search-bar {
+    border: #fff;
+}
+.search-form {
+    border-bottom: 1px solid gray;
+    padding-bottom: 15px;
+}
+.search-bar:focus {
+    outline: none;
+}
+
+/* Delete button */
+.delete-btn {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: #e62222;
+}
+
+.delete-btn, .delete-btn span {
+    transition: 200ms;
+}
+
+.delete-btn .delete-btn_text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+}
+
+.delete-btn .delete-btn_icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn svg {
+    width: 15px;
+    fill: #eee;
+}
+
+.delete-btn:hover {
+    background: #ff3636;
+}
+
+.delete-btn:hover .delete-btn_text {
+    color: transparent;
+}
+
+.delete-btn:hover .delete-btn_icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.delete-btn:focus {
+    outline: none;
+}
+
+.delete-btn:active .delete-btn_icon svg {
+    transform: scale(0.8);
+}
+
+/* Add Product button */
+.add-button {
+    position: relative;
+    width: 180px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #34974d;
+    background-color: #3aa856;
+}
+
+.add-button, .add-button__icon, .add-button__text {
+    transition: all 0.3s;
+}
+
+.add-button .add-button__text {
+    transform: translateX(30px);
+    color: #fff;
+    font-weight: 600;
+}
+
+.add-button .add-button__icon {
+    position: absolute;
+    transform: translateX(134px);
+    height: 100%;
+    width: 39px;
+    background-color: #34974d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-button .svg {
+    width: 30px;
+    stroke: #fff;
+}
+
+.add-button:hover {
+    background: #34974d;
+}
+
+.add-button:hover .add-button__text {
+    color: transparent;
+}
+
+.add-button:hover .add-button__icon {
+    width: 148px;
+    transform: translateX(10px);
+}
+
+.add-button:active .add-button__icon {
+    background-color: #2e8644;
+}
+
+.add-button:active {
+    border: 1px solid #2e8644;
+}
+
+/* Edit button */
+.edit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 2px;
+    height: 40px;
+    width: 85px;
+    border: none;
+    background: #ffd4a7;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.lable {
+    line-height: 22px;
+    font-size: 19px;
+    color: #F68713;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+.edit-button:hover {
+    background: #f3a757;
+}
+
+.edit-button:hover .svg-icon {
+    animation: lr 1s linear infinite;
+}
+
+@keyframes lr {
+0% {
+    transform: translateX(0);
+}
+
+25% {
+    transform: translateX(-1px);
+}
+
+75% {
+    transform: translateX(1px);
+}
+
+100% {
+    transform: translateX(0);
+}
+}
+
+/* Moving between pages */
+/* Moving to Home Page */
+.home-page-content:target {
+    display: block;
+}
+.d-none {
+    display: none;
+}
+/* Moving to Product Page */
+.product-page-content {
+    display: none;
+}
+.product-page-content:target {
+    display: block;
+}
+/* Moving to Product Form */
+.form-page-content {
+    display: none;
+}
+.form-page-content:target {
+    display: block;
+}
+/* Moving to Order Page */
+.order-page-content {
+    display: none;
+}
+.order-page-content:target {
+    display: block;
+}
+/* Moving to edit form */
+.edit-form-page-content {
+    display: none;
+}
+.edit-form-page-content:target {
+    display: block;
+}
+/* Moving to Messages page */
+.message-page-content {
+    display: none;
+}
+.message-page-content:target{
+    display: block;
+}
+
+/* Modal */
+.modal-btn {
+    width: 150px;
+    height: 50px;
+}
+.modal-form-container form {
+    width: 100%;
+}
+/* Message page */
+.media:hover {
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+/* Product Form */
+.form-container {
+    border: 1px solid black;
+    padding-left: 0;
+    margin-bottom: 10px;
+    width: 85%;
+}
+.form-container img {
+    width: 50%;
+}
+.form-container form {
+    width: 45%;
+    padding: 30px 0;
+}
+.form-input {
+    border: 1px solid black;
+    background-color: #f8f9fa;
+    height: 35px;
+    border-radius: 5px;
+    color: black;
+}
+.form-input:focus {
+    outline: 2px solid #F68713;
+    border: none;
+}
+input[type="file"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #f3a757;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+/* Submit buttons */
+.form-btn {
+    --color: #f68713;
+    font-family: inherit;
+    display: inline-block;
+    width: 20em;
+    height: 2.6em;
+    line-height: 2.5em;
+    overflow: hidden;
+    margin: 20px;
+    font-size: 20px;
+    z-index: 1;
+    border: 2px solid var(--color);
+    border-radius: 6px;
+    position: relative;
+}
+.form-btn a {
+    color: var(--color);
+}
+.form-btn:hover a {
+    color: white;
+}
+
+.form-btn::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 300px;
+    height: 110px;
+    z-index: -1;
+    border-radius: 50%;
+    top: 100%;
+    left: 100%;
+    transition: .3s all;
+}
+
+.form-btn:hover {
+    color: white;
+}
+
+.form-btn:hover::before {
+    top: -30px;
+    left: -30px;
+}
+
+/* Reset .form-btns */
+.reset-form-btn {
+    --color: #0077ff;
+    font-family: inherit;
+    display: inline-block;
+    width: 20em;
+    height: 2.6em;
+    line-height: 2.5em;
+    overflow: hidden;
+    margin: 20px;
+    font-size: 20px;
+    z-index: 1;
+    color: var(--color);
+    border: 2px solid var(--color);
+    border-radius: 6px;
+    position: relative;
+}
+
+.reset-form-btn::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 300px;
+    height: 110px;
+    z-index: -1;
+    border-radius: 50%;
+    top: 100%;
+    left: 100%;
+    transition: .3s all;
+}
+
+.reset-form-btn:hover {
+    color: white;
+}
+
+.reset-form-btn:hover::before {
+    top: -30px;
+    left: -30px;
+}
+
+/* Recent Orders table */
+tr:hover .order-id {
+    color: #f68713!important;
+}
+.order-id {
+    vertical-align: middle;
+}
+.order-table tr {
+    background-color: white!important;
+}
+td {
+    vertical-align: middle;
+}
+.paid {
+    display: block;
+    color: #83ab47;
+    background-color: #f4fde5;
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    border-radius: 15px;
+}
+.unpaid {
+    display: block;
+    color: #999999;
+    background-color: #e8e8e8;
+    width: 70px;
+    height: 25px;
+    text-align: center;
+    border-radius: 15px;
+}
