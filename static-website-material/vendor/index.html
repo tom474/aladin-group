@@ -119,13 +119,13 @@
             <div class="contents">
                 <div class="images">
                     <div class="logo">
-                        <a href="#"><img src="../assets/images/aladin_logo.PNG" height="100px"></a>
+                        <a href="#"><img src="../assets/images/aladin_logo.PNG"></a>
                         <h3 class="caregory"><a href="../customer/" id="customer" href="#">Customer</a> | <a href="../vendor/" id="vendor" href="#"><span>Vendor</span></a> | <a href="../shipper/" id="shipper" href="#">Shipper</a></h3>
                     </div>
                     <div>
-                        <img src="../assets/images/new_vendor_image copy.svg" height="400px">
+                        <img id="corp_img" src="../assets/images/new_vendor_image copy.svg">
                     </div>
-                    <div class="alter_login">
+                    <div class="alter_login alter_login_main">
                         <div><p>or continue with:</p></div>
                         <div class="alter_login_icon">
                             <a href="#"><img src="../assets/images/Google__G__Logo.svg" height="30px"></a>
@@ -138,14 +138,14 @@
                 <form action="#" method="post">
                     <div class="form_title">
                         <h2>Become our partner</h2>
-                        
+                                                
                     </div>
                     <div class="contact_form">    
 
-                        <div class="input_box profile_pic">
-                            <img src="../assets/images/Default_pfp.svg" title="Please choose a profile picture" id="photo">
-                            <input type="file" id="file" name="pfp" accept="image/*" title="Please choose a profile picture">
-                            <label for="file" id="upload_button" title="Please choose a profile picture">Choose Photo</label>
+                        <div class="profile_pic">
+                            <img src="../assets/images/Default_pfp.svg" title="choose a profile picture" id="photo">
+                            <input type="file" id="file" name="pfp" accept="image/*" title="choose a profile picture">
+                            <label for="file" id="upload_button" title="choose a profile picture">Choose Photo</label>
                         </div>    
                                 
                         <div class="input_box username">
@@ -180,17 +180,24 @@
                         </div>
                                 
                         <div class="input_box submit">
-                            <input type="submit" value="Register">
+                            <input type="submit" value="Register" title="register account">
                         </div>
 
                         <div class="input_box login_line">
                             <p id="login">Already have an account? <a href="#">Login</a></p>
                         </div>
-                    </div>
-                </form>
-                
-            </div>
 
+                        <div class="alter_login alter_login_hidden form_title">
+                            <div><p>or continue with:</p></div>
+                            <div class="alter_login_icon">
+                                <a href="#"><img src="../assets/images/Google__G__Logo.svg" height="30px"></a>
+                                <a href="#"><img src="../assets/images/Facebook-Icon-9imsd.svg" height="30px"></a>
+                                <a href="#"><img src="../assets/images/cdnlogo.com_twitter-icon.svg" height="30px"></a>
+                            </div>
+                        </div>
+                    </div>
+                </form>                
+            </div>
         </div>
 
         <!-- JavaScript -->

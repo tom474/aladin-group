@@ -119,13 +119,13 @@
             <div class="contents">
                 <div class="images">
                     <div class="logo">
-                        <a href="#"><img src="../assets/images/aladin_logo.PNG" height="100px"></a>
+                        <a href="#"><img src="../assets/images/aladin_logo.PNG"></a>
                         <h3 class="caregory"><a href="../customer/" id="customer" href="#">Customer</a> | <a href="../vendor/" id="vendor" href="#">Vendor</a> | <a href="../shipper/" id="shipper" href="#"><span>Shipper</span></a></h3>
                     </div>
                     <div>
-                        <img src="../assets/images/shipper_image.svg" height="400px">
+                        <img id="corp_img" src="../assets/images/shipper_image.svg">
                     </div>
-                    <div class="alter_login">
+                    <div class="alter_login alter_login_main">
                         <div><p>or continue with:</p></div>
                         <div class="alter_login_icon">
                             <a href="#"><img src="../assets/images/Google__G__Logo.svg" height="30px"></a>
@@ -136,26 +136,28 @@
                 </div> 
                 
                 <form action="#" method="post">
-                    <div class="form_title">
+                    <div class="form_title form_title_main">
                         <h2>Become our deliver</h2>
-                        
+                    </div>
+                    <div class="form_title form_title_hidden">
+                        <h2>Become our delivery partner</h2>
                     </div>
                     <div class="contact_form">    
 
-                        <div class="input_box profile_pic">
-                            <img src="../assets/images/Default_pfp.svg" title="Please choose a profile picture" id="photo">
-                            <input type="file" id="file" name="pfp" accept="image/*" title="Please choose a profile picture">
-                            <label for="file" id="upload_button" title="Please choose a profile picture">Choose Photo</label>
+                        <div class="profile_pic">
+                            <img src="../assets/images/Default_pfp.svg" title="choose a profile picture" id="photo">
+                            <input type="file" id="file" name="pfp" accept="image/*" title="choose a profile picture">
+                            <label for="file" id="upload_button" title="choose a profile picture">Choose Photo</label>
                         </div>  
                                 
                         <div class="input_box username">
                             <label>Username </label>
-                            <input type="text" id="username" name="username" placeholder="SantaNuke12" pattern="^[a-zA-Z0-9]{8,15}$" autofocus title="contains only letters (lower and upper case) and digits, has a length from 8 to 15 characters" required/>
+                            <input type="text" id="username" name="username" placeholder="BloodyTina79" pattern="^[a-zA-Z0-9]{8,15}$" autofocus title="contains only letters (lower and upper case) and digits, has a length from 8 to 15 characters" required/>
                         </div>
         
                         <div class="input_box name">
                             <label>Full name </label>
-                            <input type="text" name="name" id="name" pattern=".{5,}" placeholder="James Cole" title="Please enter your name, minimum 5 charaters long" required/>
+                            <input type="text" name="name" id="name" pattern=".{5,}" placeholder="Margaret Thatcher" title="Please enter your name, minimum 5 charaters long" required/>
                         </div>
 
                         <div class="input_box email">
@@ -165,9 +167,9 @@
 
                         <div class="input_box hub">
                             <label>Distribution hub </label>
-                            <select class="hub" name="hub" id="hub" required>
+                            <select class="hub" name="hub" id="hub" title="select a distribution hub" required>
                                 <option value="">
-                                --Choose a distribution hub--
+                                
                                 </option>
                                 <option value="1">
                                 a
@@ -193,17 +195,25 @@
                         </div>
                                 
                         <div class="input_box submit">
-                            <input type="submit" value="Register">
+                            <input type="submit" value="Register" title="register account">
                         </div>
 
                         <div class="input_box">
                             <p id="login">Already have an account? <a href="#">Login</a></p>
                         </div>
-                    </div>
-                </form>
-                
-            </div>
 
+                        <div class="alter_login alter_login_hidden form_title">
+                            <div><p>or continue with:</p></div>
+                            <div class="alter_login_icon">
+                                <a href="#"><img src="../assets/images/Google__G__Logo.svg" height="30px"></a>
+                                <a href="#"><img src="../assets/images/Facebook-Icon-9imsd.svg" height="30px"></a>
+                                <a href="#"><img src="../assets/images/cdnlogo.com_twitter-icon.svg" height="30px"></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>                
+            </div>
         </div>
 
         <!-- JavaScript -->

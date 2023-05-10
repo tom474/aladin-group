@@ -1,6 +1,5 @@
 h1 {
   font-family: 'Dancing Script', cursive;
-  
 }
 
 h2, h3, h4, h5, h6 {
@@ -52,7 +51,6 @@ label {
     margin:5px;
     flex-wrap: nowrap;
     max-width:max-content;
- 
 }
 
 .container {
@@ -63,10 +61,18 @@ label {
     margin-bottom: 20px;
     position: relative;
   }
+
+#corp_img {
+  height: 400px;
+}
     
 .form_title {
   text-align: center;
 
+}
+
+.form_title_hidden {
+  display: none;
 }
 
 .form_title img {
@@ -117,7 +123,6 @@ form {
   align-items: center;
 }
 
-
 .form_title h2 {
   font-size: 35px;
   color: #f05d40;
@@ -138,6 +143,10 @@ form {
   transition: 0.3s;
 }
 
+.alter_login_hidden {
+  display: none;
+}
+
 .checkbox {
   height: 15px;
   width: 15px;
@@ -149,7 +158,6 @@ form {
 }
 
 .submit input {
-
   font-size: 21px;
   background-color: orange;
   color: white;
@@ -174,24 +182,16 @@ a:hover {
 }
 
 
-
-
-
-
-
-
-
-
-
+/* pfp */
 
 .profile_pic{
   height: 175px;
   width: 175px;
   position: relative;
-  left: 60px;
+  left: 62px;
   border-radius: 50%;
   overflow: hidden;
-  border: 5px solid #f05d40;
+  border: 4px solid #f05d40;
 }
 
 #photo{
@@ -219,7 +219,7 @@ a:hover {
   cursor: pointer;
   display: none;
 }
-
+/* pfp */
 
 .caregory {
   font-size: 25px;
@@ -247,6 +247,10 @@ a:hover {
   align-items: center;
 }
 
+.logo img {
+  height: 100px;
+}
+
 .logo a {
   text-decoration: none;
   color:black;
@@ -264,4 +268,111 @@ a:hover {
 #vendor:hover {
   transition: 0.2s;
   color: #0A58CC;
+}
+
+
+
+@media only screen and (max-width:1023px) {
+  #corp_img {
+    height: 300px;
+  }
+
+  .profile_pic{
+    height: 150px;
+    width: 150px;
+    left: 55px;
+  }
+  
+  .caregory {
+    font-size: 20px;
+  }
+
+  .form_title h2 {
+    font-size: 27px;
+  }
+
+  .input_box {
+    margin-bottom: 10px;
+    width: 250px;
+    font-size: 15px;
+  }
+
+  #login {
+    font-size: 15px;
+  }
+
+  #password {
+    width: 250px;
+  }
+
+  .logo img {
+    height: 90px;
+  }
+  
+  .contents {
+    padding: 15px;
+  }
+
+}
+
+
+@media only screen and (max-width: 767px) {
+  #corp_img {display: none;}
+  .alter_login_main {display: none;}
+  .alter_login_hidden {display:block}
+  .contents {flex-wrap: wrap;}
+
+  .form_title h2 {
+    font-size: 25px;
+  }
+
+  .alter_login_hidden {
+    margin-bottom: 10px;
+  }
+
+  .contents {
+    justify-content: space-around;
+    margin: 0px;
+  }
+
+  .contents {
+    padding: 20px;
+  }
+
+  #password {
+    width: 340px;
+  }
+
+  .input_box {
+    margin-bottom: 10px;
+    width: 340px;
+    font-size: 20px;
+  }
+
+  .profile_pic{
+    height: 175px;
+    width: 175px;
+    left: 80px;
+  }
+
+  #login {
+    font-size: 18px;
+  }
+
+  .logo img {
+    height: 78px;
+  }
+
+  .input_box input, .input_box select {
+    font-size: 20px;
+  }
+
+  .form_title_hidden {
+    display: block;
+  }
+
+  .form_title_main {
+    display: none;
+  }
+
 }
