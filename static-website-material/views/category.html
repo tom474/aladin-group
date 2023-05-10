@@ -113,61 +113,60 @@
     </head>
     <body>
         <!-- navbar-->
-        <nav class="navbar pt-2 pb-2 fixed-top navbar-expand-md">
-            <div class="container-lg ">
-                <div class="nav-content d-flex justify-content-between">
-                    <div class="left d-flex flex-row align-items-center">
-                        <a class="navbar-brand" href="#">
-                            <img src="../assets/images/logo-1.png" alt="Bootstrap" width="60" height="50">
+        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+            <div class="container-lg">
+              <a class="navbar-brand d-flex align-items-center" href="#">
+                <img class="pe-2" src="../assets/images/logo-1.png" width="60" height="50" alt="">
+                <div class="ps-2" style="font-family: 'Dancing Script', cursive;">
+                    <h4>Aladin</h4>
+                    
+                </div>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Category
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Clothes</a></li>
+                      <li><a class="dropdown-item" href="#">Clothes</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Clothes</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                </ul>
+                <div class="nav-item d-flex">
+                    <div class="option">
+                        <a href="#">
+                            <i class="fa-solid fa-user"></i>
                         </a>
-                        <h4 class="mb-0">Aladin</h4>
                     </div>
-                    <div class="middle d-flex align-items-center">
-                        <ul class="nav d-flex justify-content-center align-items-center">
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Category
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
-                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
-                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
-                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
-                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
-                                    <li><a class="dropdown-item" href="#">Clothes</a></li>
-
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Hot</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#">Contact</a>
-                            </li>
-                          </ul>
+                    <div class="option ms-3">
+                        <a href="#">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
                     </div>
-                    <div class="right d-flex">
-                        <div class="option">
-                            <a href="#">
-                                <i class="fa-solid fa-user"></i>
-                            </a>
-                        </div>
-                        <div class="option ms-3">
-                            <a href="#">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </a>
-                        </div>
-                        <div class="option ms-3">
-                            <a href="../static-website-material/views/cart.html">
-                                <i class="fa-solid fa-bag-shopping"></i>
-                            </a>
-                        </div>
+                    <div class="option ms-3">
+                        <a href="../static-website-material/views/cart.html">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </a>
                     </div>
                 </div>
-            </div>  
+              </div>
+            </div>
         </nav>
 
         <!-- banner -->

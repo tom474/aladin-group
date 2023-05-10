@@ -29,29 +29,22 @@
     font-size: 30px;
 }
 
-.middle .nav-item a {
+.nav-item a {
     color: black !important;
 }
-.middle .nav-item:hover > a {
+
+.nav-item:hover > a {
     color: var(--primary-color) !important;
     transition: all .15s linear;
 }
-
-.right {
-    align-items: center;
-}
-
-.right .option a{
-    color: black;
-    font-size: 20px;
-}
-.right .option:hover a {
-    color:var(--primary-color) ;
+.nav-item .option:hover a {
+    color: var(--primary-color) !important;
     transition: all .15s linear;
 }
 /* banner */
 #banner {
-    margin-top: 88px;
+    margin-top: 76px;
+
     background-color: rgb(239, 233, 226);
 }
 .banner .row h1 {
