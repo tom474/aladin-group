@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Aladin</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../assets/css/reset.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="../assets/favicon/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="../assets/favicon/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="../assets/favicon/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="../assets/favicon/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="../assets/favicon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="../assets/favicon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="../assets/favicon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="../assets/favicon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="../assets/favicon/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="../assets/favicon/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="../assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="../assets/favicon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="../assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="../assets/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+            name="msapplication-TileImage"
+            content="../assets/favicon/ms-icon-144x144.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600;700&family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,600&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Font Awesome 5 -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div class="container-fluid position-relative d-flex p-0">
+            <!-- Sidebar -->
+            <div class="sidebar pe-4 pb-3">
+                <nav class="navbar navbar-dark">
+                    <a href="#" class="navbar-brand mx-4 mb-3">
+                        <h1 class="text-light">
+                            <img
+                                src="../assets/images/logo-1(backup).png"
+                                alt="logo"
+                                style="width: 60px; height: 60px"
+                            />
+                            Aladin
+                        </h1>
+                    </a>
+                    <div class="d-flex align-items-center ms-4 mb-4">
+                        <div class="position-relative">
+                            <img
+                                class="rounded-circle"
+                                src="../assets/images/cuong.jpg"
+                                alt="user-image"
+                                style="width: 40px; height: 40px"
+                            />
+                            <div
+                                class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"
+                            ></div>
+                        </div>
+                        <div class="ms-3 text-white">
+                            <h6 class="mb-0">Cuong Tran</h6>
+                            <span>Shipper</span>
+                        </div>
+                    </div>
+                    <div class="navbar-nav w-100">
+                        <a href="#!" class="nav-item nav-link active">
+                            <i class="fa fa-tachometer-alt me-2"></i>
+                            Dashboard
+                        </a>
+                        <a href="#!" class="nav-item nav-link">
+                            <i class="fas fa-truck"></i>
+                            Delivered
+                        </a>
+                        <a href="#!" class="nav-item nav-link">
+                            <i class="fas fa-window-close"></i>
+                            Canceled
+                        </a>
+                        <a href="#!" class="nav-item nav-link">
+                            <i class="fas fa-location-arrow"></i>
+                            Tracking
+                        </a>
+                        <a href="#!" class="nav-item nav-link">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <!-- Main content -->
+            <div class="content">
+                <!-- Navbar -->
+                <nav
+                    class="navbar navbar-expand navbar-dark sticky-top px-4 py-0"
+                >
+                    <a href="#!" class="navbar-brand d-flex d-lg-none me-4">
+                        <h2 class="text-primary mb-0">
+                            <img
+                                src="../assets/images/logo-1(backup).png"
+                                alt="logo"
+                                style="width: 60px; height: 60px"
+                            />
+                        </h2>
+                    </a>
+                    <a
+                        href="#"
+                        class="sidebar-toggler flex-shrink-0 text-decoration-none text-white"
+                    >
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <form class="d-none d-md-flex ms-4">
+                        <input
+                            class="form-control bg-white border-0"
+                            type="search"
+                            placeholder="Search"
+                        />
+                    </form>
+                    <div class="navbar-nav align-items-center ms-auto">
+                        <div class="nav-item dropdown">
+                            <a
+                                href="#"
+                                class="nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown"
+                            >
+                                <i class="fa fa-bell me-lg-2"></i>
+                                <span class="d-none d-lg-inline-flex"
+                                    >Notification</span
+                                >
+                            </a>
+                            <div
+                                class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0"
+                            >
+                                <a href="#" class="dropdown-item">
+                                    <h6 class="fw-normal mb-0">
+                                        Profile updated
+                                    </h6>
+                                    <small>5 minutes ago</small>
+                                </a>
+                                <hr class="dropdown-divider" />
+                                <a href="#" class="dropdown-item">
+                                    <h6 class="fw-normal mb-0">
+                                        New user added
+                                    </h6>
+                                    <small>5 minutes ago</small>
+                                </a>
+                                <hr class="dropdown-divider" />
+                                <a href="#" class="dropdown-item">
+                                    <h6 class="fw-normal mb-0">
+                                        Password changed
+                                    </h6>
+                                    <small>5 minutes ago</small>
+                                </a>
+                                <hr class="dropdown-divider" />
+                                <a href="#" class="dropdown-item text-center"
+                                    >See all notifications</a
+                                >
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a
+                                href="#"
+                                class="nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown"
+                            >
+                                <img
+                                    class="rounded-circle me-lg-2"
+                                    src="../assets/images/cuong.jpg"
+                                    alt=""
+                                    style="width: 40px; height: 40px"
+                                />
+                                <span class="d-none d-lg-inline-flex"
+                                    >Cuong Tran</span
+                                >
+                            </a>
+                            <div
+                                class="dropdown-menu dropdown-menu-end border-0 rounded-0 rounded-bottom m-0"
+                            >
+                                <a href="#" class="dropdown-item">My Profile</a>
+                                <a href="#" class="dropdown-item">Settings</a>
+                                <hr class="dropdown-divider" />
+                                <a href="#" class="dropdown-item">Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Active Orders -->
+                <div class="container-fluid pt-4 px-4">
+                    <div class="order text-center p-4">
+                        <div
+                            class="d-flex align-items-center justify-content-between mb-4 text-white"
+                        >
+                            <h6 class="mb-0">Active Orders</h6>
+                            <h6 class="mb-0">Distribution Hub</h6>
+                        </div>
+                        <div class="table-responsive bg-white">
+                            <table
+                                class="table text-start align-middle table-bordered table-hover mb-0"
+                            >
+                                <thead class="bg-secondary-subtle">
+                                    <tr class="text-black">
+                                        <th scope="col">Invoice</th>
+                                        <th scope="col">Shipper</th>
+                                        <th scope="col">Receiver</th>
+                                        <th scope="col">Amount</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="order-row">
+                                        <td>INV-0001</td>
+                                        <td>Cuong Tran</td>
+                                        <td>Cuong Tran</td>
+                                        <td>$123</td>
+                                        <td>01/01/2023</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <!-- Button trigger modal -->
+                                            <button
+                                                type="button"
+                                                class="btn btn-primary btn-sm"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#order-detail"
+                                            >
+                                                Details
+                                            </button>
+
+                                            <!-- Modal -->
+                                            <div
+                                                class="modal fade"
+                                                id="order-detail"
+                                                tabindex="-1"
+                                                role="dialog"
+                                                aria-labelledby="exampleModalCenterTitle"
+                                                aria-hidden="true"
+                                            >
+                                                <div
+                                                    class="modal-dialog modal-dialog-centered"
+                                                    role="document"
+                                                >
+                                                    <div class="modal-content">
+                                                        <div
+                                                            class="modal-header"
+                                                        >
+                                                            <h5
+                                                                class="modal-title"
+                                                                id="exampleModalLongTitle"
+                                                            >
+                                                                Invoice Details
+                                                            </h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row">
+                                                                <div class="col mb-1">
+                                                                    <p class="small mb-1">Order No.</p>
+                                                                    <p>INV-0001</p>
+                                                                </div>
+                                                                <div class="col mb-1">
+                                                                    <p class="small mb-1">Distribution Hub</p>
+                                                                    <p>Distribution Hub</p>
+                                                                </div>
+                                                                <div class="col mb-1">
+                                                                    <p class="small mb-1">Date</p>
+                                                                    <p>01/01/2023</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <label class="small mb-1" for="order-status">Status:</label>
+                                                                    <select class="custom-select my-1 mr-sm-2" id="order-status">
+                                                                        <option value="1" selected>Active</option>
+                                                                        <option value="2">Delivered</option>
+                                                                        <option value="3">Canceled</option>
+                                                                      </select>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                            <hr>
+                                                            <p class="small mb-1">Item list</p>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <p>BEATS Solo 3 Wireless Headphones</p>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <p>x1</p>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <p>£299.99</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <p>BEATS Solo 3 Wireless Headphones</p>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <p>x1</p>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <p>£299.99</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <p>BEATS Solo 3 Wireless Headphones</p>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <p>x1</p>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <p>£299.99</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <p class="fs-5 text mb-1">Total Price:</p>
+                                                                </div>
+                                                                <div class="col">
+                                                                </div>
+                                                                <div class="col">
+                                                                    <p class="fs-5 text mb-1">£599.97</p>
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row">
+                                                                <div class="col mb-1">
+                                                                    <p class="small mb-1">Receiver</p>
+                                                                    <p>Tran Manh Cuong</p>
+                                                                </div>
+                                                                <div class="col mb-1">
+                                                                    <p class="small mb-1">Address</p>
+                                                                    <p>33 Nguyen Huu Tho</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col mb-1">
+                                                                    <p class="small mb-1">Phone Number</p>
+                                                                    <p>0901727436</p>
+                                                                </div>
+                                                                <div class="col mb-1">
+                                                                    <p class="small mb-1">Payment Method</p>
+                                                                    <p>Cash on Delivery (COD)</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="modal-footer"
+                                                        >
+                                                            <button
+                                                                type="button"
+                                                                class="btn btn-secondary"
+                                                                data-bs-dismiss="modal"
+                                                            >
+                                                                Close
+                                                            </button>
+                                                            <button
+                                                                type="button"
+                                                                class="btn save-button"
+                                                                data-bs-dismiss="modal"
+                                                            >
+                                                                Save changes
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-0001</td>
+                                        <td>Cuong Tran</td>
+                                        <td>Cuong Tran</td>
+                                        <td>$123</td>
+                                        <td>01/01/2023</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <a
+                                                class="btn btn-sm btn-primary"
+                                                href="#"
+                                                >Details</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-0001</td>
+                                        <td>Cuong Tran</td>
+                                        <td>Cuong Tran</td>
+                                        <td>$123</td>
+                                        <td>01/01/2023</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <a
+                                                class="btn btn-sm btn-primary"
+                                                href="#"
+                                                >Details</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-0002</td>
+                                        <td>Loc Truong</td>
+                                        <td>Loc Truong</td>
+                                        <td>$123</td>
+                                        <td>01/01/2023</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <a
+                                                class="btn btn-sm btn-primary"
+                                                href=""
+                                                >Details</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-0002</td>
+                                        <td>Loc Truong</td>
+                                        <td>Loc Truong</td>
+                                        <td>$123</td>
+                                        <td>01/01/2023</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <a
+                                                class="btn btn-sm btn-primary"
+                                                href=""
+                                                >Details</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-0002</td>
+                                        <td>Loc Truong</td>
+                                        <td>Loc Truong</td>
+                                        <td>$123</td>
+                                        <td>01/01/2023</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <a
+                                                class="btn btn-sm btn-primary"
+                                                href=""
+                                                >Details</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr></tr>
+                                    <tr>
+                                        <td>INV-0003</td>
+                                        <td>Khai Nguyen</td>
+                                        <td>Khai Nguyen</td>
+                                        <td>$123</td>
+                                        <td>01/01/2023</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <a
+                                                class="btn btn-sm btn-primary"
+                                                href=""
+                                                >Details</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-0003</td>
+                                        <td>Khai Nguyen</td>
+                                        <td>Khai Nguyen</td>
+                                        <td>$123</td>
+                                        <td>01/01/2023</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <a
+                                                class="btn btn-sm btn-primary"
+                                                href=""
+                                                >Details</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-0003</td>
+                                        <td>Khai Nguyen</td>
+                                        <td>Khai Nguyen</td>
+                                        <td>$123</td>
+                                        <td>01/01/2023</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <a
+                                                class="btn btn-sm btn-primary"
+                                                href=""
+                                                >Details</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-0004</td>
+                                        <td>Hao Truong</td>
+                                        <td>Hao Truong</td>
+                                        <td>$123</td>
+                                        <td>01/01/2023</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <a
+                                                class="btn btn-sm btn-primary"
+                                                href=""
+                                                >Details</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-0004</td>
+                                        <td>Hao Truong</td>
+                                        <td>Hao Truong</td>
+                                        <td>$123</td>
+                                        <td>01/01/2023</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <a
+                                                class="btn btn-sm btn-primary"
+                                                href=""
+                                                >Details</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-0004</td>
+                                        <td>Hao Truong</td>
+                                        <td>Hao Truong</td>
+                                        <td>$123</td>
+                                        <td>01/01/2023</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <a
+                                                class="btn btn-sm btn-primary"
+                                                href=""
+                                                >Details</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-0005</td>
+                                        <td>Minh Huynh</td>
+                                        <td>Minh Huynh</td>
+                                        <td>$123</td>
+                                        <td>01/01/2023</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <a
+                                                class="btn btn-sm btn-primary"
+                                                href=""
+                                                >Details</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-0005</td>
+                                        <td>Minh Huynh</td>
+                                        <td>Minh Huynh</td>
+                                        <td>$123</td>
+                                        <td>01/01/2023</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <a
+                                                class="btn btn-sm btn-primary"
+                                                href=""
+                                                >Details</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-0005</td>
+                                        <td>Minh Huynh</td>
+                                        <td>Minh Huynh</td>
+                                        <td>$123</td>
+                                        <td>01/01/2023</td>
+                                        <td>Active</td>
+                                        <td>
+                                            <a
+                                                class="btn btn-sm btn-primary"
+                                                href=""
+                                                >Details</a
+                                            >
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <footer class="container-fluid pt-4 px-4">
+                    <div class="footer rounded-top p-4">
+                        <ul class="nav justify-content-center border-bottom pb-3 mb-1">
+                            <li class="nav-item"><a href="#!" class="nav-link px-2">Home</a></li>
+                            <li class="nav-item"><a href="#!" class="nav-link px-2">About</a></li>
+                            <li class="nav-item"><a href="#!" class="nav-link px-2">Copyright</a></li>
+                            <li class="nav-item"><a href="#!" class="nav-link px-2">Privacy</a></li>
+                            <li class="nav-item"><a href="#!" class="nav-link px-2">Support</a></li>
+                        </ul>
+                        <p class="text-center">© Aladin, Inc</p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+            integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+            integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+            crossorigin="anonymous"
+        ></script>
+        <script src="../assets/js/index.js"></script>
+    </body>
+</html>
