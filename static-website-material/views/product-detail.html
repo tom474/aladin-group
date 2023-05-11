@@ -113,75 +113,83 @@
     </head>
     <body>
         <!-- navbar-->
-        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
-            <div class="container-lg">
-              <a class="navbar-brand d-flex align-items-center" href="#">
-                <img class="pe-2" src="../assets/images/logo-1.png" width="60" height="50" alt="">
-                <div class="ps-2" style="font-family: 'Dancing Script', cursive;">
-                    <h4>Aladin</h4>
-                    
-                    
-                </div>
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Category
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Clothes</a></li>
-                      <li><a class="dropdown-item" href="#">Clothes</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Clothes</a></li>
+        <nav class="navbar fixed-top navbar-expand-md bg-body-tertiary" >
+            <div class="container-lg" style="position: relative;">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img class="pe-2" src="../assets/images/logo-1.png" width="60" height="50" alt="">
+                    <div class="ps-2" style="font-family: 'Dancing Script', cursive;">
+                        <h4>Aladin</h4>
+                        
+                    </div>
+                </a>
+                <div class="hamburger">
+                    <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hot">Hot</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#categories" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Category
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#recommendation">Clothes</a></li>
+                        <li><a class="dropdown-item" href="#recommendation2">Furniture</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer">Footer</a>
+                    </li>
                     </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                </ul>
-                <div class="nav-item d-flex">
-                    <div class="option">
-                        <a href="#">
-                            <i class="fa-solid fa-user"></i>
-                        </a>
-                    </div>
+                </div>
+                <div class="nav-item d-flex justify-content-center align-items-center">
                     <div class="option ms-3">
-                        <a href="#">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </a>
+                        <div class="group">
+                            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                            <input placeholder="Search" type="search" class="input">
+                          </div>
                     </div>
-                    <div class="option ms-3">
+                    <div class="option ms-2">
+                        <div class="nav-item dropdown">
+                            <a
+                                href="#"
+                                class="nav-link dropdown-toggle"
+                                data-bs-toggle="dropdown"
+                            >
+                                <img
+                                    class="rounded-circle me-lg-2"
+                                    src="../assets/images/cuong.jpg"
+                                    alt=""
+                                    style="width: 40px; height: 40px"
+                                />
+                            </a>
+                            <div
+                                class="dropdown-menu dropdown-menu-end border-0 rounded-0 rounded-bottom m-0"
+                            >
+                                <a href="#" class="dropdown-item">My Profile</a>
+                                <a href="#" class="dropdown-item">Settings</a>
+                                <hr class="dropdown-divider" />
+                                <a href="#" class="dropdown-item">Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option ms-3 me-2">
                         <a href="../static-website-material/views/cart.html">
                             <i class="fa-solid fa-bag-shopping"></i>
                         </a>
                     </div>
+                    <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
-              </div>
             </div>
         </nav>
-        <div class="container">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a style="text-decoration: none;" href="../index.html">Home</a></li>
-              <li class="breadcrumb-item"><a style="text-decoration: none;" href="../views/category.html">Clothes</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Lena</li>
-            </ol>
-          </nav>
-        </div>
         <!-- main -->
         <section id="product-detail" style="background-color: rgba(253, 202, 108, 0.498);" >
-            <div class="container-lg py-3">
-                <div class="products-container row my-5" style=" border-radius: 5px; background-color:rgba(246, 136, 19, 0.5);">
+            <div class="container-lg py-5 mt-5">
+                <div class="products-container row my-5" style=" border-radius: 5px; ">
                     <div class="item col-lg-6 d-flex flex-column py-3">
                         <div class="col-lg-12 ">
                             <img class="img-fluid" width="100%" src="../../static-website-material/assets/images/customer/homepage/product/product6.jpg" alt="">
@@ -283,34 +291,66 @@
             </div>
         </section>
         <!-- footer -->
-        <section id="footer">
-            <div class="background-color ">
-                <div class="container-lg footer-container py-1">
-                    <div class="content row my-5">
-                        <div class="col-lg-3 col-md-6 col-ms-12">
-                            <h3 style="font-size: 35px; font-family: 'Dancing Script', cursive;">Aladin</h3>
-                            <p>Copyright <span><i class="fa-regular fa-copyright"></i></span> Aladin </p>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-ms-12">
-                            <h3>ABOUT</h3>
-                            <a href=""><p>BLOG</p></a>
-                            <a href=""><p>CONTACT US</p></a>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-ms-12">
-                            <h3>POLICIES</h3>
-                            <a href=""><p>PRIVACY POLICY</p></a>
-                            <a href=""><p>TERMS & CONDITIONS</p></a>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-ms-12">
-                            <h3>HEY!!</h3>
-                            <p>If you need any help just click here</p>
-                            <button class="btn btn-primary">Help</button>
-                        </div>
+        <section id="footer mt-5" style="background-color: #E38B18;">
+            <div class="container mt-5">
+                <footer class="py-5">
+                  <div class="row">
+                    <div class="col-6 col-md-2 mb-3">
+                      <h5 style="color: wheat; ">About</h5>
+                      <ul class="nav flex-column">
+                        <li class=" mb-2"><a href="#" style="text-decoration: none; color: white !important;" class=" p-0 text-muted">Home</a></li>
+                        <li class=" mb-2"><a href="#" style="text-decoration: none; color: white !important;" class=" p-0 text-muted">Features</a></li>
+                        <li class=" mb-2"><a href="#" style="text-decoration: none; color: white !important;" class=" p-0 text-muted">Pricing</a></li>
+                        <li class=" mb-2"><a href="#" style="text-decoration: none; color: white !important;" class=" p-0 text-muted">FAQs</a></li>
+                        <li class=" mb-2"><a href="#" style="text-decoration: none; color: white !important;" class=" p-0 text-muted">About</a></li>
+                      </ul>
                     </div>
-                </div>
-            </div>
+              
+                    <div class="col-6 col-md-2 mb-3">
+                      <h5 style="color: wheat; ">Customer Care</h5>
+                      <ul class="nav flex-column">
+                        <li class=" mb-2"><a href="#" style="text-decoration: none; color: white !important;" class=" p-0 text-muted">Shipping & Returns</a></li>
+                        <li class=" mb-2"><a href="#" style="text-decoration: none; color: white !important;" class=" p-0 text-muted">Size Guide</a></li>
+                        <li class=" mb-2"><a href="#" style="text-decoration: none; color: white !important;" class=" p-0 text-muted">Retailers</a></li>
+                        <li class=" mb-2"><a href="#" style="text-decoration: none; color: white !important;" class=" p-0 text-muted">Wholesale</a></li>
+                        <li class=" mb-2"><a href="#" style="text-decoration: none; color: white !important;" class=" p-0 text-muted">AfterPay</a></li>
+                      </ul>
+                    </div>
+              
+                    <div class="col-6 col-md-2 mb-3">
+                      <h5 style="color: wheat; ">Privacy</h5>
+                      <ul class="nav flex-column">
+                        <li class=" mb-2"><a href="#" style="text-decoration: none; color: white !important;" class=" p-0 text-muted">Terms & Conditions</a></li>
+                        <li class=" mb-2"><a href="#" style="text-decoration: none; color: white !important;" class=" p-0 text-muted">Privacy Policy</a></li>
+                        <li class=" mb-2"><a href="#" style="text-decoration: none; color: white !important;" class=" p-0 text-muted">Terms of Use</a></li>
+                      </ul>
+                    </div>
+              
+                    <div class="col-md-5 offset-md-1 mb-3">
+                      <form>
+                        <h5 style=" color: white !important;" >Subscribe to our newsletter</h5>
+                        <p style=" color: white !important;" >Monthly digest of what's new and exciting from us.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                          <label for="newsletter1" class="visually-hidden">Email address</label>
+                          <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                          <button style=" color: white !important;" class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+              
+                  <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                    <p style=" color: white !important;">&copy; 2023 Aladin . All rights reserved.</p>
+                    <ul class="list-unstyled d-flex">
+                      <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+                      <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+                      <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+                    </ul>
+                  </div>
+                </footer>
+              </div>
+              
         </section>
-
         <!-- scroll to top -->
         <a href="#">    
             <div class="to-top">
@@ -323,6 +363,6 @@
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"
         ></script>
-        <script src="../assets/js/index.js"></script>
+        <script src="../assets/js/product.js"></script>
     </body>
 </html>
