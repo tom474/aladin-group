@@ -438,3 +438,14 @@ a:hover {
   }
 
 }
+
+
+@media only screen and (max-width: 480px) {
+  .logo img{
+    height: 60px;
+  }
+  .caregory {
+    font-size: 18px;
+    margin-left: 15px;
+  }
+}
