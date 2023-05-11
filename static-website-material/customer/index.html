@@ -148,27 +148,27 @@
                             <label for="file" id="upload_button" title="choose a profile picture">Choose Photo</label>
                         </div>                                     
                                 
-                        <div class="input_box username">
+                        <div class="input_box input username">
                             <label>Username </label>
                             <input type="text" id="username" name="username" placeholder="SillyBanana27" pattern="^[a-zA-Z0-9]{8,15}$" autofocus title="contains only letters (lower and upper case) and digits, has a length from 8 to 15 characters" required/>
                         </div>
         
-                        <div class="input_box name">
+                        <div class="input_box input name">
                             <label>Full name </label>
-                            <input type="text" name="name" id="name" placeholder="John Smith" title="Please enter your name, minimum 5 charaters long" required/>
+                            <input type="text" name="name" id="name" placeholder="" title="Please enter your name, minimum 5 charaters long" required/>
                         </div>
 
-                        <div class="input_box email">
+                        <div class="input_box input email">
                             <label>Email address </label>
                             <input type="email" name="email" id="email" pattern=".{5,}" title="enter your email address" placeholder="example@email.com" required/>
                         </div>
         
-                        <div class="input_box address">
+                        <div class="input_box input address">
                             <label>Address </label>
-                            <input type="text" name="text" id="tel" placeholder="69 Hai Ba Trung" pattern=".{5,}" title="Please enter your address, minimum 5 charaters long" required/>
+                            <input type="text" name="text" id="address" placeholder="69 Hai Ba Trung" pattern=".{5,}" title="Please enter your address, minimum 5 charaters long" required/>
                         </div>
                                
-                        <div class="input_box password">
+                        <div class="input_box input password">
                             <label>Set password </label>
                             <div><input id="password" type="password" name="pwd" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,20}" title="Must contain at least one number, uppercase, lowercase letter, one special charater (!@#$%^&*), and length from 8 to 20 charaters" required/><i class="fa fa-eye-slash" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i></div>
                         </div>
@@ -180,7 +180,7 @@
                         </div>
                                 
                         <div class="input_box submit">
-                            <input type="submit" value="Register" title="register account">
+                            <input type="submit" id="submit" value="Register" title="register account">
                         </div>
 
                         <div class="input_box">
