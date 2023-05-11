@@ -5,9 +5,12 @@
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
-
+body.accountpage{
+	background-color: #f68713;
+	font-family: 'Poppins', sans-serif;
+}
 .wave{
 	position: fixed;
 	bottom: 0;
@@ -192,9 +195,9 @@ a:hover{
 	}
 }
 
-@media screen and (MAX-width: 1023px){
+@media screen and (MAX-width: 100000px){
 	form{
-		width: 290px;
+		width: 204px;
 	}
 
 	.login-content h2{
@@ -261,7 +264,7 @@ a:hover{
 }
 .btn-primary {
     color: #fff;
-    background-color: #f64713;
+    background-color:#f64713;
     border-color: black;
 }
 .btn-primary:hover {
@@ -275,9 +278,16 @@ a:hover{
 
 .account-details-button a {
 	text-align: center;
-	color: #111111;
+	color:#f64713;
 }
 
 .account-details-button a:hover {
 	color: #d9d9d9;
+}
+.username {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
 }
