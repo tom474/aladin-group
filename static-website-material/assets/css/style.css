@@ -195,9 +195,9 @@ a:hover{
 	}
 }
 
-@media screen and (MAX-width: 100000px){
+@media screen and (MAX-width: 1023px){
 	form{
-		width: 204px;
+		width: 300px;
 	}
 
 	.login-content h2{
@@ -209,7 +209,6 @@ a:hover{
 		width: 400px;
 	}
 }
-
 @media screen and (max-width: 767px){
 	.container1{
 		grid-template-columns: 1fr;
@@ -290,4 +289,7 @@ a:hover{
     align-content: stretch;
     flex-wrap: wrap;
     justify-content: center;
+}
+form.account{
+	width: 205px;
 }
