@@ -1,0 +1,92 @@
+h1, h1:hover, h1:active, h1:visited {
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    margin-left: 20px;
+    color: #16161D;
+}
+
+  
+h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+  
+p, li {
+    font-family: 'Roboto Serif', serif;
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 24px;
+    text-align: start;
+}
+
+h4{
+    font-size: 20px;
+    text-align: start;
+}
+
+a {
+    text-decoration: none;
+}
+
+label {
+    font-family: 'Roboto Serif', serif;
+    font-size: 100%;
+}
+
+body {
+    background-color: #F68713;
+    margin: 7px;
+}
+
+
+  
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    flex-direction: column;
+    background-color: white;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.content {
+    text-align: justify;
+}
+
+.logo img {
+    height: 80px;
+}
+.logo {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ul {
+    list-style-type: disc;
+    
+}
+
+li {
+    padding-bottom: 5px;
+}
+
+.to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 238, 0, 0.829) !important;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    color: #16161D;
+}
