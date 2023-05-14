@@ -5,7 +5,7 @@
 }
 
 body{
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;	
 }
 body.accountpage{
 	background-color: #f68713;
@@ -292,4 +292,12 @@ a:hover{
 }
 form.account{
 	width: 205px;
+}
+.logo{
+display: flex;
+justify-content: center;	
+}
+.logo{
+	display: flex;
+	align-items: center;
 }
