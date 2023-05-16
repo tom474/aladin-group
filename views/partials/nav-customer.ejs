@@ -1,0 +1,98 @@
+<body>
+    <!-- navbar-->
+    <nav class="navbar fixed-top navbar-expand-md bg-body-tertiary">
+        <div class="container-lg" style="position: relative">
+            <a class="navbar-brand d-flex align-items-center" href="/customer/homepage">
+                <img
+                    class="pe-2"
+                    src="/images/customer/logo-1.png"
+                    width="60"
+                    height="50"
+                    alt=""
+                />
+                <div
+                    class="ps-2"
+                    style="font-family: 'Dancing Script', cursive"
+                >
+                    <h2>Aladin</h2>
+                </div>
+            </a>
+            <div class="hamburger">
+                <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="#"
+                            >Home</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hot">Hot Deal</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link"
+                            href="#categories"
+                        >
+                            Category
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer">Footer</a>
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="nav-item d-flex justify-content-center align-items-center"
+            >
+                <div class="option ms-3">
+                    <form action="/search-page" method="get">
+                        <div class="input-group">
+                          <input type="text" class="form-control" name="query" placeholder="Search something">
+                          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="option ms-3 me-2">
+                    <a href="/shopping-cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+                </div>
+                <div class="option ms-2">
+                    <div class="nav-item dropdown">
+                        <a
+                            href="#"
+                            class="nav-link dropdown-toggle"
+                            data-bs-toggle="dropdown"
+                        >
+                            <img
+                                class="rounded-circle me-lg-2"
+                                src="/images/customer/cuong.jpg"
+                                alt=""
+                                style="width: 40px; height: 40px"
+                            />
+                        </a>
+                        <div
+                            class="dropdown-menu dropdown-menu-end border-0 rounded-0 rounded-bottom m-0"
+                        >
+                            <a href="#" class="dropdown-item">My Profile</a>
+                            <hr class="dropdown-divider" />
+                            <a href="#" class="dropdown-item">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>

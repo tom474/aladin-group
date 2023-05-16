@@ -309,7 +309,7 @@ nav .icon {
     color: white !important;
 }
 
-footer ul li:hover a {
+footer ul .nav-item:hover a {
     color: white !important;
 }
 /* scroll to top */

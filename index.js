@@ -48,24 +48,35 @@ app.get("/vendor/homepage", (req, res) => {
 // Route for adding new products
 app.post("vendor/products/add", (req, res) => {});
 
-// Route for Customer homepage
 app.get("/customer/homepage", (req, res) => {
-    const products = Product.find();
+    let minPrice = parseInt(req.query.min);
+    let maxPrice = parseInt(req.query.max);
 
-    // Retrieve all categories from the database
+    // Validate and fallback for minPrice
+    if (isNaN(minPrice)) {
+        minPrice = Number.NEGATIVE_INFINITY;
+    }
+
+    // Validate and fallback for maxPrice
+    if (isNaN(maxPrice)) {
+        maxPrice = Number.POSITIVE_INFINITY;
+    }
+
+    const products = Product.find({
+        price: { $gte: minPrice, $lte: maxPrice }
+    });
+
     const categories = Product.distinct("category");
 
-    // Wait for both promises to resolve before rendering the homepage
     Promise.all([products, categories])
-        .then(([products, categories]) => {
-            res.render("homepage-customer", { products, categories });
-        })
-        .catch((error) => {
-            console.log(error.message);
-            res.status(500).send("Internal Server Error");
-        });
+    .then(([products, categories]) => {
+        res.render("homepage-customer", { products, categories });
+    })
+    .catch((error) => {
+        console.log(error.message);
+        res.status(500).send("Internal Server Error");
+    });
 });
-
 // Route for category page
 app.get("/customer/category-page", (req, res) => {
     res.render("category-page");
@@ -76,10 +87,6 @@ app.get("/customer/product-detail-page", (req, res) => {
     res.render("product-detail-page");
 });
 
-// Route for shopping cart page
-app.get("/customer/shopping-cart-page", (req, res) => {
-    res.render("shopping-cart-page");
-});
 
 // Route for Shipper homepage
 app.get("/shipper/homepage", (req, res) => {
