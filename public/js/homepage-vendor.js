@@ -47,6 +47,7 @@ activeElement.forEach((element) => {
         // Remove 'selected' class from all elements
         activeElement.forEach((e) => {
             e.classList.remove('selected');
+            localStorage.removeItem('activeTab');
         });
         // Add 'selected' class to the clicked element
         element.classList.add('selected');
@@ -87,6 +88,13 @@ tabHome.addEventListener('click', () => {
   // Remove the hidden page from local storage
   localStorage.removeItem('hiddenPage');
 });
+
+let backBtn = document.querySelector('.back-btn')
+backBtn.addEventListener('click', () => {
+  homePage.classList.remove('d-none');
+  localStorage.removeItem('hiddenPage');
+});
+
 
 // Using jQurey for making reponsive side menu
 (function ($) {
