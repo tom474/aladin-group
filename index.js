@@ -10,6 +10,7 @@ const Shipper = schema.Shipper;
 const Product = schema.Product;
 const Order = schema.Order;
 
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
@@ -308,6 +309,91 @@ app.get("/customer/products/:id", async (req, res) => {
         res.render('product-detail-page',{product:product})
      })            
 });
+
+
+// route to search page
+app.get("/search-page", async (req, res) => {
+    try {
+      const query = req.query.query;
+      const results = await Product.find({ $text: { $search: query } });
+      res.render('search-page', { results });
+    } catch (err) {
+      console.log(err);
+      res.status(500).send('Error');
+    }
+  });
+// route to shopping list page
+app.get("/shopping-cart", (req, res) =>  {
+    res.render('shopping-cart-page')
+});
+// add product to shopping cart
+let cart = {
+    products: [],
+    totalPrice: 0
+  };
+
+app.post("/shopping-cart", (req, res) => {
+    Product.findById(req.body.id)
+        .then((product) => { 
+            cart.products.push(product);
+            cart.totalPrice += product.price;
+            res.render('shopping-cart-page', { cart });
+        })
+        .catch((error) => {
+            console.error(error);
+            res.sendStatus(500); // Send error response
+        });
+});
+// remove item from shopping cart
+app.post("/shopping-cart/remove", (req, res) => {
+    const productIdToRemove = req.body.id;
+  
+    // Find the index of the product in the cart.products array
+    const indexToRemove = cart.products.findIndex((product) => product.id === productIdToRemove);
+  
+    if (indexToRemove !== -1) {
+      const removedProduct = cart.products.splice(indexToRemove, 1)[0];
+      cart.totalPrice -= removedProduct.price;
+
+      res.render('shopping-cart-page', { cart });
+    } else {
+      // Product not found in the cart
+      res.sendStatus(404);
+    }
+  });
+
+  app.post("/shipper/order", async (req, res) => {
+    const distributionHub = req.body.distributionHub;
+    const date = req.body.date;
+    const status = req.body.status;
+    const receiver = req.body.receiver;
+    const address = req.body.address;
+    const paymentMethod = req.body.payment;
+    const newOrder = new Order({
+        distributionHub,
+        date,
+        status,
+        receiver,
+        address,
+        paymentMethod
+    });
+
+    try {
+        // Save the new order to the database
+        await newOrder.save();
+        
+        // Clear the cart after the order is placed
+        cart.products = [];
+        cart.totalPrice = 0;
+
+        // Order created successfully, redirect to the customer homepage or perform any other desired actions
+        res.redirect('/homepage-customer');
+    } catch (error) {
+        console.error(error);
+        res.sendStatus(500); // Send error response
+    }
+});
+
 
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);

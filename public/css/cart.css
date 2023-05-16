@@ -70,3 +70,12 @@
     color: white;
     opacity: 0.7;
 }
+.modal-footer button {
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+}
+
+.modal-footer button:hover {
+    background-color: rgba(255, 0, 0, 0.521);
+}

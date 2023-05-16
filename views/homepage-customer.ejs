@@ -50,27 +50,15 @@
                     class="nav-item d-flex justify-content-center align-items-center"
                 >
                     <div class="option ms-3">
-                        <div class="group">
-                            <svg
-                                class="icon"
-                                aria-hidden="true"
-                                viewBox="0 0 24 24"
-                            >
-                                <g>
-                                    <path
-                                        d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
-                                    ></path>
-                                </g>
-                            </svg>
-                            <input
-                                placeholder="Search"
-                                type="search"
-                                class="input"
-                            />
-                        </div>
+                        <form action="/search-page" method="get">
+                            <div class="input-group">
+                              <input type="text" class="form-control" name="query" placeholder="Search something">
+                              <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </form>
                     </div>
                     <div class="option ms-3 me-2">
-                        <a href="../static-website-material/views/cart.html">
+                        <a href="/shopping-cart">
                             <i class="fa-solid fa-bag-shopping"></i>
                         </a>
                     </div>
@@ -151,7 +139,7 @@
                     <div class="row w-100">
                         <% categories.forEach((category) => { %>
                             <div class="col-lg-4 col-md-4 col-sm-4 card-display">
-                                <div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded" style="width: 15rem">
+                                <div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem">
                                     <a href="/customer/category/<%=category%>" style="text-decoration: none">
                                         <div class="cate-img">
                                             <div class="img-border">
@@ -179,59 +167,6 @@
                           <% }); %>
                 </div>
             </div>
-        </section>
-        <!-- recommendation -->
-        <section id="recommendation">
-            <div class="container-lg">
-                <div style="position: relative">
-                    <div class="title" style="padding: 20px">
-                        <% const word = "fashion"%>
-                        <% const capitalize = word.charAt(0).toUpperCase() + word.slice(1); %>
-                        <h1 style="color:#e38b18">FASHION <a href="/customer/category/<%=capitalize%>"> <i class="fa-solid fa-arrow-right" style="color:#e38b18"></i></a> </h1>
-                    </div>
-                    <div class="product-container row">
-                        <% const fashionProducts = products.filter(product => (product.category === "Fashion" )) %> 
-                        <% for (var i = 0; i < 3; i++) { %>
-                            <% var product = fashionProducts[i] %>
-                            <div class="col-lg-4 col-md-6 col-ms-12 my-3 d-flex product-col">
-                                <a href="/customer/products/<%=product.id%>" style="text-decoration: none; color: black">
-                                    <div    class="product-card ms-2" style="position: relative">
-                                        <div class="product-image border shadow">
-                                            <img src="/images/customer/<%=product.image%>" class="project-thumb" width="300px" height="302px" alt="<%=product.name%>"/>
-                                        </div>
-                                        <div class="overlay product-effect" style="position: absolute">
-                                            <div class="p-3 d-flex justify-content-center w-100">
-                                                ADD TO CART
-                                            </div>
-                                        </div>
-                                        <div class="product-info d-flex pt-3 align-items-center flex-column">
-                                            <h3><%=product.name%></h3>
-                                            <p class="mb-0"><%=product.price%>$</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        <% }; %>
-                    </div>
-                </div>
-            </div>
-                <!-- banner #2 -->
-                <div class="banner container my-4" style="position: relative">
-                    <div class="row">
-                        <div class="ps-0 pe-0">
-                            <img
-                                class="img-fluid"
-                                src="/images/customer/banner2.png"
-                                alt=""
-                            />
-                        </div>
-                    </div>
-                    <div class="button-banner" style="position: absolute">
-                        <a href="#recommendation2">
-                            <button class="btn">EXPLORE NOW</button>
-                        </a>
-                    </div>
-                </div>
         </section>
         <!-- HOT -->
         <section id="hot">

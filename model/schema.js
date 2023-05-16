@@ -139,11 +139,6 @@ const productSchema = new mongoose.Schema({
 
 // Define Order schema
 const orderSchema = new mongoose.Schema({
-    id: {
-        type: String,
-        required: true,
-        unique: true
-    },
     date: {
         type: Date,
         required: true
@@ -160,11 +155,6 @@ const orderSchema = new mongoose.Schema({
     status: {
         type: String,
         enum: ['Active','Canceled', 'Delivered'],
-        required: true
-    },
-    total: {
-        type: Number,
-        min: 0,
         required: true
     },
     distributionHub: {
@@ -186,6 +176,8 @@ const orderSchema = new mongoose.Schema({
         required: true
     },
 });
+
+productSchema.index({'$**':'text'})
 
 // Create user model with sub-models
 const User = mongoose.model("User", userSchema);

@@ -184,10 +184,10 @@
         <!-- main -->
         <section id="product-detail" style="background-color: rgba(253, 202, 108, 0.498);" >
             <div class="container-lg py-5 mt-5">
-                <div class="products-container row my-5" style=" border-radius: 5px; ">
+                <div class="products-container row my-5 align-items-center" style=" border-radius: 5px; ">
                     <div class="item col-lg-6 d-flex flex-column py-3">
-                        <div class="col-lg-12 ">
-                            <img class="img-fluid" width="100%" src="/images/customer/<%=product.image%>" alt="">
+                        <div class="col-lg-12 d-flex justify-content-center ">
+                            <img class="img-fluid" width="70%" src="/images/customer/<%=product.image%>" alt="">
                         </div>
                     </div>
                     <div class="item col-lg-6 py-3">
@@ -204,34 +204,17 @@
                                 <div class="item price p-3 ">
                                     <%=product.price%>$
                                 </div>
-                                <div class="item d-flex">
-                                    <h5> Distribution hub: </h5>
-                                    <p class="ms-3">bla bla bla</p>
-                                </div>
                                 <div class="item">
                                     <div class="product-desc">
                                         <h5>Product Description</h5>
                                         <p><%=product.description%></p>
                                     </div>
                                 </div>
-                                <div class="item quantity d-flex">
-                                    <h5>Quantity: </h5>
-                                    <div class="quantity-control d-flex ms-3">
-                                        <div class="box">
-                                            <span class="minus border-end px-2" style="cursor: pointer;">-</span>
-                                        </div>
-                                        <div class="box px-2">
-                                            <span class="num">01</span>
-                                        </div>
-                                        <div class="box">
-                                            <span class="plus border-start px-2" style="cursor: pointer;">+</span>
-                                        </div>
-                                    </div>
-
-                                </div>
                                 <div class="item">
-                                    <button type="button" class="btn add-cart">Add to Cart</button>
-                                    <input class="btn" type="button" value="Buy Now">
+                                    <form action="/shopping-cart" method="POST">
+                                        <input type="hidden" name="id" value="<%=product.id%>">
+                                        <button type="submit" class="btn add-cart">Add to Cart</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
