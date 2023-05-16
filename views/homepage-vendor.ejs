@@ -149,12 +149,6 @@
                             <strong>Orders <span class="noti ms-2"><%= orders.length %></span></strong>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#home-page" class="nav-link text-black fs-5">
-                            <i class="bi bi-reception-4 me-2 fs-4"></i>
-                            <strong>Dashboard</strong>
-                        </a>
-                    </li>
                 </ul>
                 <div class="logo-container ">
                     <a href="/" class="d-flex justify-content-between align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none" style="width: 160px;">
@@ -169,87 +163,6 @@
             </div>
             <!-- Side menu end-->
 
-            <!-- Home Page start-->
-            <div class="container-fluid rounded-page home-page-content" id="home-page">
-                <nav class="d-flex justify-content-between align-items-center" style="padding: 2.5% 5% 0;">
-                    <a class="navbar-brand"><strong class="fs-1">Dashboard</strong>
-                        <br>
-                        <p class="text-secondary">Everything here</p>
-                    </a>
-                    <form class="search-form mt-1">
-                        <a class="bi bi-search fs-6 text-black me-2" type="submit"></a>
-                        <input class="search-bar" type="search" placeholder="Search anything..." aria-label="Search">
-                    </form>
-                    <a href="#" class="nav-link text-black fs-6">
-                        <strong>View Your Store</strong>
-                        <i class="bi bi-box-arrow-in-right ms-2 fs-5"></i>
-                    </a>
-                </nav>
-                <br>
-                <div class="container-fluid pt-4 px-4">
-                    <div class="row g-4">
-                        <div class="col-sm-12 col-md-12 col-xl-12 ">
-                            <div class="h-100 bg-secondary-subtle rounded p-4">
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">To Do List</h6>
-                                    <a href="" class="text-black">Show All</a>
-                                </div>
-                                <div class="d-flex mb-2">
-                                    <input class="form-control bg-light border-0" type="text" placeholder="Enter task">
-                                    <button type="button" class="btn text-light ms-2" style="background-color: #f68713;">Add</button>
-                                </div>
-                                <div class="d-flex align-items-center border-bottom py-2">
-                                    <input class="form-check-input m-0" type="checkbox">
-                                    <div class="w-100 ms-3">
-                                        <div class="d-flex w-100 align-items-center justify-content-between">
-                                            <span>Short task goes here...</span>
-                                            <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center border-bottom py-2">
-                                    <input class="form-check-input m-0" type="checkbox">
-                                    <div class="w-100 ms-3">
-                                        <div class="d-flex w-100 align-items-center justify-content-between">
-                                            <span>Short task goes here...</span>
-                                            <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center border-bottom py-2">
-                                    <input class="form-check-input m-0" type="checkbox" checked>
-                                    <div class="w-100 ms-3">
-                                        <div class="d-flex w-100 align-items-center justify-content-between">
-                                            <span><del>Short task goes here...</del></span>
-                                            <button class="btn btn-sm text-primary"><i class="fa fa-times"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center border-bottom py-2">
-                                    <input class="form-check-input m-0" type="checkbox">
-                                    <div class="w-100 ms-3">
-                                        <div class="d-flex w-100 align-items-center justify-content-between">
-                                            <span>Short task goes here...</span>
-                                            <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center pt-2">
-                                    <input class="form-check-input m-0" type="checkbox">
-                                    <div class="w-100 ms-3">
-                                        <div class="d-flex w-100 align-items-center justify-content-between">
-                                            <span>Short task goes here...</span>
-                                            <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-            <!-- Home Page end-->
-
             <!-- Product Page start-->
             <div class="container-fluid rounded-page product-page-content" id="product-page">
                 <nav class="d-flex justify-content-between align-items-center" style="padding: 2.5% 5% 0;">
@@ -257,12 +170,12 @@
                         <br>
                         <p class="text-secondary">Manage your products here</p>
                     </a>
-                    <form class="search-form mt-1">
+                    <form class="search-form mt-1 d-none">
                         <a class="bi bi-search fs-6 text-black me-2" type="submit"></a>
                         <input class="search-bar" type="search" placeholder="Search anything..." aria-label="Search">
                     </form>
                     <a href="#" class="nav-link text-black fs-6">
-                        <strong>View Your Store</strong>
+                        <strong>View Your Account</strong>
                         <i class="bi bi-box-arrow-in-right ms-2 fs-5"></i>
                     </a>
                 </nav>
@@ -289,26 +202,25 @@
                                 </thead>
                                 <tbody>
                                     <% products.forEach(product => { %>
-                                        <tr>
-                                            <td><%= product.name %></td>
-                                            <td>
-                                                <% if (product.image.data) { %>
-                                                    <img src="data:image/<%= product.image.contentType %>;base64,<%= product.image.data.toString('base64') %>" height="200px" width="200px"/>
-                                                  <% } else { %>
-                                                    <img src="/images/customer/clothes.png" height="200px" width="200px"/>
-                                                  <% } %>
-                                            </td>
-                                            <td>$<%= product.price %></td>
-                                            <td><%= product.description %></td>
-                                            <td><%= product.category %></td>
-                                            <td><%= product.amount %></td>
-                                            <td>
-                                                <button class="edit-button mx-auto btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" type="button">
-                                                    <svg class="svg-icon" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g stroke="#f68713" stroke-linecap="round" stroke-width="2"><path d="m20 20h-16"></path><path clip-rule="evenodd" d="m14.5858 4.41422c.781-.78105 2.0474-.78105 2.8284 0 .7811.78105.7811 2.04738 0 2.82843l-8.28322 8.28325-3.03046.202.20203-3.0304z" fill-rule="evenodd"></path></g></svg>
-                                                    <span class="lable">Edit</span>
-                                                </button>
-                                            </td>
-                                        </tr>
+                                        <% if (product.vendorUsername === user.businessName) { %>
+                                            <tr>
+                                                <td><%= product.name %></td>
+                                                <td>
+                                                    <% if (product.image.data) { %>
+                                                        <img src="data:image/<%= product.image.contentType %>;base64,<%= product.image.data.toString('base64') %>" height="200px" width="200px"/>
+                                                    <% } else { %>
+                                                        <img src="/images/customer/clothes.png" height="200px" width="200px"/>
+                                                    <% } %>
+                                                </td>
+                                                <td>$<%= product.price %></td>
+                                                <td><%= product.description %></td>
+                                                <td><%= product.category %></td>
+                                                <td><%= product.amount %></td>
+                                                <td>
+                                                    <a class='text-decoration-none' href="/vendor/products/delete/<%= product._id %>/<%= user._id %>"><button class="delete-btn"><span class="delete-btn_text">Delete</span><span class="delete-btn_icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button></a>
+                                                </td>
+                                            </tr>
+                                        <% } %>
                                     <% }); %>
                                 </tbody>
                             </table>
@@ -325,18 +237,17 @@
                         <br>
                         <p class="text-secondary">Add your products here</p>
                     </a>
-                    <form class="search-form mt-1">
+                    <form class="search-form mt-1 d-none">
                         <a class="bi bi-search fs-6 text-black me-2" type="submit"></a>
                         <input class="search-bar" type="search" placeholder="Search anything..." aria-label="Search">
                     </form>
                     <a href="#" class="nav-link text-black fs-6">
-                        <strong>View Your Store</strong>
+                        <strong>View Your Account</strong>
                         <i class="bi bi-box-arrow-in-right ms-2 fs-5"></i>
                     </a>
                 </nav>
                 <br>
-                <div class="container d-flex justify-content-between form-container">
-                    <img src="/images/customer/clothes.png" alt="">
+                <div class="container d-flex justify-content-center form-container">
                     <form action="/vendor/products/add" method='post' class="d-flex flex-column">
                         <h2 class="text-secondary">Fill in the product information</h2>
                         <br>
@@ -381,53 +292,6 @@
             </div>
             <!-- Form to add product end-->
 
-            <!-- Form to edit product start-->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">  
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Product's Information</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container d-flex justify-content-between align-items-center modal-form-container">
-                                <img src="./assets/images/clothe.png" alt="">
-                                <form action="" class="d-flex flex-column">
-                                    <label class="fs-4 mb-2" for="name">Name</label>
-                                    <input  class = "form-input" type="text" name='Name' id="name" value='Clothe' required>
-                                    <br>
-                                    <label class="fs-4 mb-2" for="price">Price</label>
-                                    <input  class = "form-input" type="text" name='Price' id="price" value='$99.99' required>
-                                    <br>
-                                    <label class="fs-4 mb-2" for="category">Select Category</label>
-                                    <select class="form-input" name="category" id="category" value='category 1' required>
-                                        <option value="category1">category1</option>
-                                        <option value="category1">category1</option>
-                                        <option value="category1">category1</option>
-                                        <option value="category1">category1</option>
-                                        <option value="category1">category1</option>
-                                    </select>
-                                    <br>
-                                    <label class="fs-4 mb-2" for="description">Description</label>
-                                    <input  class = "form-input" type="text" name="Description" id="description" value='abcxyz' required>
-                                    <br> 
-                                    <label class="fs-4 mb-2" for="added-date">Date</label>
-                                    <input  class = "form-input" type="date" name="Added Date" id="added-date" value='2023-05-10' required> 
-                                    <br>
-                                    <label class="fs-4 mb-2" for="amount">Amount</label>
-                                    <input  class = "form-input" type="number" name="Amount" id="amount" value='999' required>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary modal-btn" data-bs-dismiss="modal"><strong>Save changes</strong></button>
-                            <button class="delete-btn"><span class="delete-btn_text">Delete</span><span class="delete-btn_icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Form to edit product end-->
-
             <!-- Order page start-->
             <div class="container-fluid rounded-page order-page-content" id="order-page">
                 <nav class="d-flex justify-content-between align-items-center" style="padding: 2.5% 5% 0;">
@@ -435,12 +299,12 @@
                         <br>
                         <p class="text-secondary">View your orders here</p>
                     </a>
-                    <form class="search-form mt-1">
+                    <form class="search-form mt-1 d-none">
                         <a class="bi bi-search fs-6 text-black me-2" type="submit"></a>
                         <input class="search-bar" type="search" placeholder="Search anything..." aria-label="Search">
                     </form>
                     <a href="#" class="nav-link text-black fs-6">
-                        <strong>View Your Store</strong>
+                        <strong>View Your Account</strong>
                         <i class="bi bi-box-arrow-in-right ms-2 fs-5"></i>
                     </a>
                 </nav>
@@ -483,6 +347,20 @@
             </div>
             <!-- Order page end-->
         </div>
+        <section id="footer" class="bg-light" style="margin-left: 250px;">
+            <div class="container">
+                <footer class="py-3">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+                </ul>
+                <p class="text-center text-muted">© 2022 Company, Inc</p>
+                </footer>
+            </div>
+        </section>
         <!-- JavaScript -->
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -491,7 +369,6 @@
         ></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-        <script src="/js/chart.min.js"></script>
         <script src="/js/homepage-vendor.js"></script>
     </body>
 </html>

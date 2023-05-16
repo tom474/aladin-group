@@ -94,13 +94,14 @@ backBtn.addEventListener('click', () => {
   homePage.classList.remove('d-none');
   localStorage.removeItem('hiddenPage');
 });
-
+let logOutBtn = document.querySelector('.bi-box-arrow-right')
+logOutBtn.addEventListener('click', () => {
+  localStorage.clear();
+});
 
 // Using jQurey for making reponsive side menu
 (function ($) {
     "use strict";
-
-    // Sidebar Toggler
     $(".sidebar-toggler").click(function () {
         $(".sidebar").toggleClass("open");
         return false;

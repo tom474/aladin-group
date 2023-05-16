@@ -68,6 +68,13 @@ app.post("/vendor/products/add", (req, res) => {
         })
         .catch((error) => res.send(error));
 });
+app.get('/vendor/products/delete/:pid/:uid', (req,res) => {
+    Product.findByIdAndDelete(req.params.pid)
+    .then(() => {
+        res.redirect(`/vendor/homepage/${req.params.uid}`);
+    })
+    .catch((error) => res.send(error));
+})
 // khai end
 
 // Route for Customer homepage
