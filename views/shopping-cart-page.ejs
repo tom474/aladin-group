@@ -124,10 +124,6 @@
                             <p>Shopping Cart</p>
                         </div>
                       </a>
-                      <form class="d-none d-md-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                      </form>
                     </div>
                   </nav>
             </div>
@@ -148,7 +144,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <!-- order form -->
-                  <form action="/shipper/homepage" method="POST">    
+                  <form action="/shipper/homepage" id="form-order" method="POST">    
                     <div class="modal-body">
                           <div class="row">
                               <div class="col mb-1">
@@ -168,19 +164,16 @@
                           </div>
                         <hr>
                         <p class="small mb-1">Item list</p>
-
+                        <input type="hidden" name="products" value="<%= JSON.stringify(cart.products.map(product => product.name)) %>">
                           <%if(cart.products.length > 0) { %>
                             <% cart.products.forEach((product) => {  %>
-                              <div class="row">
+                              <div class="list-item-<%=product.id%> row">
                                 <div class="col">
                                     <p><%=product.name%></p>
                                 </div>
                                 <div class="col d-flex align-items-center justify-content-between">
                                     <p class="mb-0 me-3"><%=product.price%> $</p>
-                                    <form action="/shopping-cart/remove" method="POST">
-                                      <input type="hidden" name="id" value="<%= product.id %>">
-                                      <button type="submit" class="btn btn-danger"><i class="fa-solid fa-x"></i></button>
-                                    </form>
+                                    <button type="button" onclick="event.preventDefault(); deleteProduct('<%= product.id %>')" class="btn btn-danger"><i class="fa-solid fa-x"></i></button>  
                                 </div>
                               </div>
                             <% }); %>
@@ -215,9 +208,9 @@
                               <label class="small mb-1" for="payment">Payment Method</label>
                               <div></div>
                               <select class="custom-select my-1 mr-sm-2" name="payment" id="payment">
-                                  <option value="1" selected>Cash on Delivery (COD)</option>
-                                  <option value="2">Internet Banking</option>
-                                </select> 
+                                  <option value="Cash on Delivery (COD)" selected>Cash on Delivery (COD)</option>
+                                  <option value="Internet Banking">Internet Banking</option>
+                              </select> 
                             </div>
                         </div>
                       </div>
@@ -239,6 +232,40 @@
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"
         ></script>
+        <script>
+          function deleteProduct(productId) {
+                // Create a hidden input field for the product ID
+                const productIdInput = document.createElement('input');
+                productIdInput.type = 'hidden';
+                productIdInput.name = 'productId';
+                productIdInput.value = productId;
+
+                // Append the input field to the form
+                const form = document.querySelector('form');
+                form.appendChild(productIdInput);
+
+                // Send an AJAX request to delete the product
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', '/deleteProduct', true);
+                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xhr.onreadystatechange = function () {
+                  if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Handle the success response
+                    console.log('Product deleted successfully.');
+                    
+                    // Remove the product element from the UI
+                    const productElement = document.querySelector(`.modal-body .list-item-${productId}`);
+                    if (productElement) {
+                      productElement.parentNode.removeChild(productElement);
+                    }
+                  } else if (xhr.readyState === 4 && xhr.status !== 200) {
+                    // Handle the error response
+                    console.log('Error deleting product.');
+                  }
+                };
+                xhr.send(`id=${productId}`);
+              }
+        </script>
         <script src="/js/shopping-cart.js"></script>
     </body>
 </html>

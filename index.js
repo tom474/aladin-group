@@ -339,43 +339,48 @@ app.post("/shopping-cart", (req, res) => {
             cart.totalPrice += product.price;
             res.render('shopping-cart-page', { cart });
         })
+
         .catch((error) => {
             console.error(error);
             res.sendStatus(500); // Send error response
         });
 });
 // remove item from shopping cart
-app.post("/shopping-cart/remove", (req, res) => {
+app.post('/deleteProduct', (req, res) => {
     const productIdToRemove = req.body.id;
   
     // Find the index of the product in the cart.products array
-    const indexToRemove = cart.products.findIndex((product) => product.id === productIdToRemove);
+    const indexToRemove = cart.products.findIndex(
+      (product) => product.id === productIdToRemove
+    );
   
     if (indexToRemove !== -1) {
       const removedProduct = cart.products.splice(indexToRemove, 1)[0];
       cart.totalPrice -= removedProduct.price;
-
-      res.render('shopping-cart-page', { cart });
+  
+      res.sendStatus(200); // Send success response
     } else {
       // Product not found in the cart
       res.sendStatus(404);
     }
   });
 
-  app.post("/shipper/order", async (req, res) => {
+  app.post("/shipper/homepage", async (req, res) => {
     const distributionHub = req.body.distributionHub;
     const date = req.body.date;
     const status = req.body.status;
     const receiver = req.body.receiver;
     const address = req.body.address;
-    const paymentMethod = req.body.payment;
+    const payment = req.body.payment;
+    const products = JSON.parse(req.body.products);
     const newOrder = new Order({
         distributionHub,
         date,
         status,
         receiver,
         address,
-        paymentMethod
+        payment,
+        products
     });
 
     try {
@@ -387,7 +392,7 @@ app.post("/shopping-cart/remove", (req, res) => {
         cart.totalPrice = 0;
 
         // Order created successfully, redirect to the customer homepage or perform any other desired actions
-        res.redirect('/homepage-customer');
+        res.redirect('/customer/homepage');
     } catch (error) {
         console.error(error);
         res.sendStatus(500); // Send error response

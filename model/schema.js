@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 mongoose
     .connect(
-        "mongodb+srv://cuongtran:emsignouc@cluster0.mmq8m4z.mongodb.net/Aladin?retryWrites=true&w=majority" // Put your database link here
+        // "mongodb+srv://cuongtran:emsignouc@cluster0.mmq8m4z.mongodb.net/Aladin?retryWrites=true&w=majority" // Put your database link here
+        "mongodb+srv://s3965528:mypassword@cluster0.yeddgxx.mongodb.net/Aladin?retryWrites=true&w=majority"
     )
     .then(() => console.log("Connected to MongoDB Atlas"))
     .catch((error) => console.log(error.message));
