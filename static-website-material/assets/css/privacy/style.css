@@ -1,7 +1,6 @@
 h1, h1:hover, h1:active, h1:visited {
     font-family: 'Dancing Script', cursive;
-    font-size: 60px;
-    margin-left: 20px;
+    font-size: 45px;
     color: #16161D;
 }
 
@@ -34,9 +33,16 @@ label {
     font-size: 100%;
 }
 
-body {
+html {
     background-color: #F68713;
-    margin: 7px;
+
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 
@@ -58,7 +64,7 @@ body {
 }
 
 .logo img {
-    height: 80px;
+    height: 110px;
 }
 .logo {
     display:flex;
@@ -90,3 +96,4 @@ li {
     margin-bottom: 20px;
     color: #16161D;
 }
+
