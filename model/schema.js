@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 mongoose
     .connect(
         "mongodb+srv://cuongtran:emsignouc@cluster0.mmq8m4z.mongodb.net/Aladin?retryWrites=true&w=majority" // Put your database link here
+        // mongodb+srv://cuongtran:emsignouc@cluster0.mmq8m4z.mongodb.net/ You can connect to the MongoDB Compass by this link
     )
     .then(() => console.log("Connected to MongoDB Atlas"))
     .catch((error) => console.log(error.message));
